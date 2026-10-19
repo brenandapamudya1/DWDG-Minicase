@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bedah Data DWDG 2026 - Telkomsel Household Connectivity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased min-h-screen p-6">
+  <div class="max-w-5xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+    <!-- Header & Tabs -->
+    <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-400">DWDG Mini Case Competition 2026</span>
+        <h1 class="text-2xl font-bold mt-2">Bedah Data & Visualisasi: Paradoks Rumah Tangga Telkomsel</h1>
+        <p class="text-slate-400 text-sm">Sumber: Annual Report Telkomsel 2025 & Casebook DWDG 2026</p>
+      </div>
+      <div class="flex gap-1.5 bg-slate-800 p-1.5 rounded-xl">
+        <button onclick="switchTab('paradox')" id="tab-paradox" class="px-4 py-2 rounded-lg text-sm font-semibold bg-rose-600 text-white transition">1. Paradoks ARPU</button>
+        <button onclick="switchTab('portfolio')" id="tab-portfolio" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">2. Peta Portofolio</button>
+        <button onclick="switchTab('simulator')" id="tab-simulator" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">3. Simulasi Dampak</button>
+      </div>
+    </div>
+
+    <!-- TAB 1: PARADOX -->
+    <div id="view-paradox" class="space-y-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-800/70 rounded-xl p-4 border border-slate-700/60">
+          <div class="text-slate-400 text-xs font-medium">Pelanggan IndiHome B2C (2025)</div>
+          <div class="text-xl font-bold text-emerald-400 mt-1">10,32 Juta <span class="text-sm font-semibold">(+7,4%)</span></div>
+          <div class="text-slate-400 text-xs mt-1">2024: 9,61 Juta (+712 ribu net add)</div>
+        </div>
+        <div class="bg-slate-800/70 rounded-xl p-4 border border-slate-700/60">
+          <div class="text-slate-400 text-xs font-medium">ARPU IndiHome B2C (2025)</div>
+          <div class="text-xl font-bold text-rose-400 mt-1">Rp213,5 rb <span class="text-sm font-semibold">(-10,1%)</span></div>
+          <div class="text-slate-400 text-xs mt-1">2024: Rp237,6 rb (-Rp24,1 rb/bln)</div>
+        </div>
+        <div class="bg-slate-800/70 rounded-xl p-4 border border-slate-700/60">
+          <div class="text-slate-400 text-xs font-medium">Pendapatan IndiHome B2C</div>
+          <div class="text-xl font-bold text-amber-400 mt-1">Rp26,17 T <span class="text-sm font-semibold">(-1,6%)</span></div>
+          <div class="text-slate-400 text-xs mt-1">2024: Rp26,61 T (-Rp438 Miliar)</div>
+        </div>
+        <div class="bg-slate-800/70 rounded-xl p-4 border border-slate-700/60">
+          <div class="text-slate-400 text-xs font-medium">Penetrasi FMC (Konvergensi)</div>
+          <div class="text-xl font-bold text-sky-400 mt-1">59% <span class="text-sm font-semibold">(+2 ppt)</span></div>
+          <div class="text-slate-400 text-xs mt-1">~6,09 Jt FMC vs ~4,23 Jt belum FMC</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 bg-slate-800/50 rounded-xl p-5 border border-slate-700/60">
+        <div>
+          <div class="text-sm font-semibold mb-3 flex justify-between">
+            <span>Tren Pelanggan IndiHome B2C (Juta)</span>
+            <span class="text-emerald-400 font-bold">Volume Naik +18,7% (2 Thn)</span>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span>2023</span><span class="font-semibold">8,694 Juta</span></div>
+              <div class="w-full bg-slate-900 h-4 rounded-full overflow-hidden"><div class="bg-emerald-500/70 h-4 rounded-full" style="width: 78%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span>2024</span><span class="font-semibold">9,612 Juta (+10,6% YoY)</span></div>
+              <div class="w-full bg-slate-900 h-4 rounded-full overflow-hidden"><div class="bg-emerald-500/85 h-4 rounded-full" style="width: 88%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span>2025</span><span class="font-semibold text-emerald-400">10,324 Juta (+7,4% YoY)</span></div>
+              <div class="w-full bg-slate-900 h-4 rounded-full overflow-hidden"><div class="bg-emerald-500 h-4 rounded-full" style="width: 96%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-sm font-semibold mb-3 flex justify-between">
+            <span>Tren ARPU IndiHome B2C (Rp Ribu/Bln)</span>
+            <span class="text-rose-400 font-bold">Nilai Turun -15,6% (2 Thn)</span>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span>2023</span><span class="font-semibold">Rp253,0 ribu</span></div>
+              <div class="w-full bg-slate-900 h-4 rounded-full overflow-hidden"><div class="bg-rose-500 h-4 rounded-full" style="width: 96%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span>2024</span><span class="font-semibold">Rp237,6 ribu (-6,1% YoY)</span></div>
+              <div class="w-full bg-slate-900 h-4 rounded-full overflow-hidden"><div class="bg-rose-500/85 h-4 rounded-full" style="width: 86%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span>2025</span><span class="font-semibold text-rose-400">Rp213,5 ribu (-10,1% YoY)</span></div>
+              <div class="w-full bg-slate-900 h-4 rounded-full overflow-hidden"><div class="bg-rose-500/70 h-4 rounded-full" style="width: 74%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-amber-500/10 rounded-xl p-4 border border-amber-500/30 text-sm">
+        <span class="font-bold text-amber-400">Diagnosis Akar Masalah:</span> Akuisisi +712 ribu pelanggan baru di 2025 didominasi paket <span class="font-semibold text-white">Single-Play (1P) & entry-level</span> di tengah perang harga Fixed Broadband (FBB), sehingga mendilusi ARPU (-10,1%) dan menggerus total pendapatan IndiHome sebesar <span class="font-semibold text-rose-400">-Rp438 Miliar</span>.
+      </div>
+    </div>
+
+    <!-- TAB 2: PORTFOLIO -->
+    <div id="view-portfolio" class="space-y-4 hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-slate-800/70 p-5 rounded-xl border border-slate-700/60">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-bold text-base text-rose-400">IndiHome (FTTH Fiber)</span>
+            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-900 font-semibold">Anchor & High-Value Home</span>
+          </div>
+          <p class="text-sm text-slate-300 mb-3">Konektivitas fiber optik stabil untuk keluarga menetap, multi-device, hiburan IPTV/OTT & gaming.</p>
+          <div class="text-xs text-slate-300 space-y-1.5">
+            <div>• <span class="font-semibold text-white">Inisiatif 2025 (AR Hal. 82 & 85):</span> IndiHome Gamer (upload/download simetris 1:1), Higher Speed More Price (HSMP), Multi-OTT Soft Bundle & Set-Top Box (STB) Takeover.</div>
+            <div>• <span class="font-semibold text-white">Risiko Saat Ini:</span> Terjebak perang harga 1P di area padat jika tidak didiferensiasi lewat bundling konten & FMC.</div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/70 p-5 rounded-xl border border-slate-700/60">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-bold text-base text-sky-400">Telkomsel Orbit (4G/5G FWA)</span>
+            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-900 font-semibold">Flexible & Greenfield Access</span>
+          </div>
+          <p class="text-sm text-slate-300 mb-3">Modem Wi-Fi seluler plug-and-play (didukung 293.136 BTS; ~5.000 BTS 5G di 80 kota) dengan opsi Prabayar & Pascabayar.</p>
+          <div class="text-xs text-slate-300 space-y-1.5">
+            <div>• <span class="font-semibold text-white">Inisiatif 2025 (AR Hal. 82):</span> Revamp paket nasional lebih simpel & kompetitif sesuai regulasi PPN.</div>
+            <div>• <span class="font-semibold text-white">Peran Strategis:</span> Akuisisi cepat di area non-fiber (greenfield), penghuni komuter/kontrakan/kos, dan inkubator pra-migrasi ke Fiber.</div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/70 p-4 rounded-xl border border-slate-700/60">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-bold text-sm text-amber-400">Temuan AR Hal. 82 & 86: EZnet & EZnet Wireless</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-slate-900">Entry-Level Shield</span>
+          </div>
+          <p class="text-xs text-slate-300">Telkomsel merilis EZnet & EZnet Wireless (Unlimited FUP + sewa alat/BYOD) untuk menahan gempuran kompetitor murah di segmen sensitif harga tanpa merusak ekuitas merek premium IndiHome & Orbit.</p>
+        </div>
+
+        <div class="bg-slate-800/70 p-4 rounded-xl border border-slate-700/60">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-bold text-sm text-emerald-400">Telkomsel One & MyTelkomsel (FMC Engine)</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-slate-900">59% Penetrasi FBB</span>
+          </div>
+          <p class="text-xs text-slate-300">Menggabungkan IndiHome + Orbit + Seluler (Halo+/SIMPATI) dalam 1 tagihan di Super-App MyTelkomsel. Masih ada <strong>41% (~4,23 juta)</strong> pelanggan IndiHome yang belum konvergen!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: SIMULATOR -->
+    <div id="view-simulator" class="space-y-4 hidden">
+      <div class="bg-slate-800/70 p-5 rounded-xl border border-slate-700/60 space-y-4">
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-bold">Simulasi Sensitivitas Nilai Rumah Tangga (Basis 2025: 10,324 Juta Pelanggan)</span>
+          <button onclick="resetSim()" class="text-xs px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 hover:bg-slate-800">Reset ke Baseline 2025</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <div class="flex justify-between text-xs mb-1.5">
+              <span>Target Pelanggan Rumah Tangga (Juta):</span>
+              <span id="lbl-subs" class="font-bold text-emerald-400">10,80 Juta (+4,6%)</span>
+            </div>
+            <input id="inp-subs" type="range" min="10.3" max="12.0" step="0.1" value="10.8" oninput="updateSim()" class="w-full accent-emerald-500 cursor-pointer" />
+            <div class="flex justify-between text-xs text-slate-400 mt-1"><span>10,3 Jt (2025)</span><span>12,0 Jt</span></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs mb-1.5">
+              <span>Target Blended ARPU (Rp Ribu/Bln):</span>
+              <span id="lbl-arpu" class="font-bold text-sky-400">Rp228,0 rb (+6,8%)</span>
+            </div>
+            <input id="inp-arpu" type="range" min="200" max="255" step="1.5" value="228" oninput="updateSim()" class="w-full accent-sky-500 cursor-pointer" />
+            <div class="flex justify-between text-xs text-slate-400 mt-1"><span>Rp200 rb</span><span>Rp213,5 rb (2025)</span><span>Rp253 rb (2023)</span></div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400">Proyeksi Pendapatan Tahunan</div>
+            <div id="out-rev" class="text-xl font-bold text-emerald-400 mt-1">Rp29,55 Triliun</div>
+            <div id="out-rev-diff" class="text-xs text-slate-400 mt-1">+Rp3,38 T vs 2025 (+12,9%)</div>
+          </div>
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400">Efek Kenaikan ARPU Saja</div>
+            <div id="out-arpu-impact" class="text-xl font-bold text-sky-400 mt-1">+Rp1,80 Triliun</div>
+            <div class="text-xs text-slate-400 mt-1">Tiap +Rp10rb ARPU = +Rp1,24 T/thn</div>
+          </div>
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400">Estimasi Tambahan EBITDA (45,4%)</div>
+            <div id="out-ebitda" class="text-xl font-bold text-amber-400 mt-1">+Rp1,53 Triliun</div>
+            <div class="text-xs text-slate-400 mt-1">Margin EBITDA Telkomsel 2025: 45,4%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tab) {
+      ['paradox', 'portfolio', 'simulator'].forEach(t => {
+        document.getElementById('view-' + t).classList.add('hidden');
+        const btn = document.getElementById('tab-' + t);
+        btn.className = 'px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition';
+      });
+      document.getElementById('view-' + tab).classList.remove('hidden');
+      document.getElementById('tab-' + tab).className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-rose-600 text-white transition';
+    }
+
+    function updateSim() {
+      const baseSubs = 10.324;
+      const baseArpu = 213.5;
+      const baseRev = 26.168;
+
+      const subs = parseFloat(document.getElementById('inp-subs').value);
+      const arpu = parseFloat(document.getElementById('inp-arpu').value);
+
+      const subsPct = ((subs - baseSubs) / baseSubs * 100).toFixed(1);
+      const arpuPct = ((arpu - baseArpu) / baseArpu * 100).toFixed(1);
+
+      document.getElementById('lbl-subs').textContent = subs.toFixed(2).replace('.', ',') + ' Juta (' + (subsPct >= 0 ? '+' : '') + subsPct.replace('.', ',') + '%)';
+      document.getElementById('lbl-arpu').textContent = 'Rp' + arpu.toFixed(1).replace('.', ',') + ' rb (' + (arpuPct >= 0 ? '+' : '') + arpuPct.replace('.', ',') + '%)';
+
+      const projRev = (subs * arpu * 12) / 1000;
+      const diffRev = projRev - baseRev;
+      const diffPct = (diffRev / baseRev * 100).toFixed(1);
+      const arpuOnlyImpact = (baseSubs * (arpu - baseArpu) * 12) / 1000;
+      const ebitdaImpact = diffRev * 0.454;
+
+      document.getElementById('out-rev').textContent = 'Rp' + projRev.toFixed(2).replace('.', ',') + ' Triliun';
+      document.getElementById('out-rev-diff').textContent = (diffRev >= 0 ? '+Rp' : '-Rp') + Math.abs(diffRev).toFixed(2).replace('.', ',') + ' T vs 2025 (' + (diffPct >= 0 ? '+' : '') + diffPct.replace('.', ',') + '%)';
+      document.getElementById('out-arpu-impact').textContent = (arpuOnlyImpact >= 0 ? '+Rp' : '-Rp') + Math.abs(arpuOnlyImpact).toFixed(2).replace('.', ',') + ' Triliun';
+      document.getElementById('out-ebitda').textContent = (ebitdaImpact >= 0 ? '+Rp' : '-Rp') + Math.abs(ebitdaImpact).toFixed(2).replace('.', ',') + ' Triliun';
+    }
+
+    function resetSim() {
+      document.getElementById('inp-subs').value = 10.324;
+      document.getElementById('inp-arpu').value = 213.5;
+      updateSim();
+    }
+
+    updateSim();
+  </script>
+</body>
+</html>
