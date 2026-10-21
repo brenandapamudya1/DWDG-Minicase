@@ -59,45 +59,41 @@ xychart-beta
 | **Pendapatan Bisnis Digital (Seluler)** | Rp78.286 M | **Rp76.805 M** | -1,9% | Menyumbang **92,4%** pendapatan seluler (naik dari 90,3% di 2024). |
 | **Pendapatan Legacy (Voice/SMS)** | Rp8.447 M | **Rp6.334 M** | -25,0% | Penurunan struktural; memaksa monetisasi datang dari data & rumah tangga. |
 | **EBITDA & Margin EBITDA** | Rp51.337 M (45,3%) | **Rp49.624 M (45,4%)** | -3,3% (+0,1ppt) | Margin sangat sehat (45,4%) berkat efisiensi biaya (-3,7% OpEx) & sinergi TelkomGroup. |
-| **Pelanggan Seluler** | 159,39 Juta | **156,06 Juta** | -2,1% | Basis masif untuk *cross-selling* Orbit & konversi Telkomsel One (FMC). |
+| **Pelanggan Seluler** | 159,39 Juta | **156,06 Juta** | -2,1% | Basis masif untuk *cross-selling* Orbit & konversi ekosistem FMC. |
 | **ARPU Seluler** | Rp44 ribu | **Rp43 ribu** | -2,3% | Membaik di Semester II-2025 (+5,1% QoQ di Q3 & +2,4% QoQ di Q4). |
 | **Data Payload / Traffic** | 20,39 Juta TB | **23,44 Juta TB** | **+15,0%** | Konsumsi data melonjak 15% (22.895 Petabyte), bukti kebutuhan kuota rumah tinggi. |
 | **Total BTS (3G/4G/5G)** | 271.040 (222.265) | **293.136 (244.501)** | **+8,2%** (+10,0%) | Termasuk **~5.000 BTS 5G di 80 kota** — tulang punggung **Telkomsel Orbit**! |
 
 ---
 
-## 3. Temuan Emas (*Hidden Gems*) di Annual Report 2025 yang Jarang Disadari Peserta Lain
+## 3. Temuan Emas (*Hidden Gems*) di Annual Report 2025 untuk Memperkuat Solusi H.O.M.E.
 
-Jika peserta lain hanya membaca *casebook* 4 halaman, mereka hanya tahu "IndiHome = Fiber" dan "Orbit = Wireless". Dari hasil bedah **Annual Report Telkomsel 2025 (Halaman 63–66 dan 81–86)**, terdapat **4 fakta strategis** yang sudah dijalankan Telkomsel dan bisa kita jadikan senjata utama solusi:
+Jika peserta lain hanya membaca *casebook* 4 halaman, mereka hanya tahu "IndiHome = Fiber" dan "Orbit = Wireless". Dari hasil bedah **Annual Report Telkomsel 2025 (Halaman 63–66 dan 81–86)**, terdapat **3 fakta strategis** mengenai IndiHome, Orbit, dan FMC yang menjadi fondasi solusi **Home Ladder (H.O.M.E.)**:
 
-1. **Arsitektur 3-Lapis yang Sebenarnya (IndiHome + Orbit + EZnet):**
-   - Di Halaman 63, 81–82, dan 86 dijelaskan bahwa Telkomsel telah meluncurkan **EZnet** (fiber *entry-level*) dan **EZnet Wireless** (*Unlimited* dengan FUP + skema sewa perangkat / *bring-your-own-device*) untuk menghadapi perang harga di segmen *mass-market* yang sensitif harga.
-   - **Artinya:** IndiHome dan Orbit **tidak boleh** ditarik turun ke perang harga murah, karena fungsi pertahanan harga bawah sudah dijaga oleh lini *entry-level*. IndiHome dan Orbit harus fokus pada **diferensiasi nilai & kualitas pengalaman**.
-2. **Senjata Monetisasi Baru IndiHome di 2025 (Halaman 82 & 85):**
+1. **Senjata Monetisasi Baru IndiHome di 2025 (Halaman 82 & 85 — Mendukung Tahap *Optimize*):**
    - **IndiHome Gamer:** Diluncurkan akhir 2025 dengan kecepatan *upload* dan *download* simetris (1:1) plus *benefit* *gaming* di ekosistem Dunia Games.
    - **Program HSMP (*Higher Speed More Price*) & *Early Payment*:** Program *upselling* kecepatan untuk menaikkan ARPU dan menekan *churn* lewat insentif pembayaran lebih awal.
    - **Multi-OTT Soft Bundle & *Set-Top Box (STB) Takeover*:** Mengubah pelanggan *Single-Play (1P)* menjadi *Dual-Play (2P)* / *Triple-Play (3P)* melalui paket *streaming* terpadu (Vidio, iQIYI, Viu, WeTV, Vision+ Premium, Prime Video, Netflix, Disney+, Max).
-3. **Revamp Nasional Telkomsel Orbit (Halaman 82 & 86):**
-   - Pada 2025, paket Orbit disederhanakan secara nasional (termasuk penyesuaian PPN) dengan opsi **Prabayar (Prepaid)** dan **Pascabayar (Postpaid)**.
-   - Orbit berperan ganda: **(a) Solusi *Greenfield*** di wilayah yang belum terjangkau jaringan *fiber* (FTTH), dan **(b) Solusi Fleksibilitas/Mobilitas** bagi rumah tangga non-permanen (perantau, penghuni kos/apartemen sewa, pekerja proyek/komuter).
-4. **Telkomsel One & Super-App MyTelkomsel (Halaman 64, 66, 82, 86):**
-   - Pada 2025, Telkomsel One diperbarui dengan **Personal Plan & Family Plan** serta integrasi penuh ke **MyTelkomsel** (yang kini mengintegrasikan IndiHome, Orbit, dan Seluler Halo+/SIMPATI dalam satu *dashboard* & satu tagihan).
-   - Penetrasi konvergensi saat ini **59%** dari basis FBB (~6,09 juta pelanggan). Artinya masih ada **41% (~4,23 juta rumah tangga IndiHome)** yang **belum** terintegrasi penuh ke paket konvergensi multi-produk, ditambah puluhan juta rumah tangga pengguna seluler Telkomsel yang belum memakai internet rumah Telkomsel!
+2. **Revamp Nasional Telkomsel Orbit (Halaman 82 & 86 — Mendukung Tahap *Harmonize* & *Move Up*):**
+   - Pada 2025, paket Orbit disederhanakan secara nasional dengan opsi **Prabayar (Prepaid)** dan **Pascabayar (Postpaid)**.
+   - Orbit berperan ganda: **(a) Solusi *Greenfield*** di wilayah yang belum terjangkau jaringan *fiber* (FTTH), dan **(b) Solusi Fleksibilitas/Mobilitas** bagi rumah tangga non-permanen (perantau, penghuni kos/apartemen sewa, rumah baru pindah) sebelum nantinya naik kelas (**Move Up**) ke IndiHome saat menetap dan *fiber-ready*.
+3. **Peluang Konvergensi FMC & Super-App MyTelkomsel (Halaman 64, 66, 82, 86 — Mendukung Tahap *Embed*):**
+   - Penetrasi konvergensi (FMC) saat ini baru mencapai **59%** dari basis FBB (~6,09 juta pelanggan). Artinya masih ada **41% (~4,23 juta rumah tangga IndiHome)** yang **belum** terhubung dengan nomor seluler keluarga Telkomsel, sehingga mudah berpindah ke kompetitor (*low switching cost*).
 
 ---
 
-## 4. Pemetaan Masalah ke 4 Pertanyaan Lomba (DWDG Case Scope)
+## 4. Pemetaan Masalah ke 4 Pertanyaan Lomba & Tangga H.O.M.E.
 
 ```mermaid
 flowchart LR
-    Q1["1. Segmentasi Rumah Tangga<br/>(Siapa & Apa Kebutuhannya?)"] --> Q2["2. Peran & Diferensiasi<br/>(IndiHome vs Orbit)"]
-    Q2 --> Q3["3. Akuisisi, Retensi & Monetisasi<br/>(Jalur Migrasi, Bundling, FMC)"]
-    Q3 --> Q4["4. Implementasi & Dampak Bisnis<br/>(Roadmap, Risiko, KPI, Finansial)"]
+    Q1["1. Segmentasi Rumah Tangga<br/>(H: Harmonize)"] --> Q2["2. Peran IndiHome vs Orbit<br/>(H: Harmonize & M: Move Up)"]
+    Q2 --> Q3["3. Siklus Nilai & Retensi<br/>(O: Optimize, M: Move Up, E: Embed)"]
+    Q3 --> Q4["4. Implementasi & Dampak Bisnis<br/>(Roadmap 5 Tahun & KPI)"]
 ```
 
-| Pertanyaan di Casebook DWDG | Akar Masalah Saat Ini (Data 2025) | Arah Strategi yang Diharapkan Juri |
+| Pertanyaan di Casebook DWDG | Akar Masalah Saat Ini (Data 2025) | Arah Strategi **Home Ladder (H.O.M.E.)** |
 | :--- | :--- | :--- |
-| **Q1. Segmentasi Rumah Tangga Prioritas** | Pelanggan rumah tangga diperlakukan seragam sehingga banyak yang memilih paket 1P termurah. | Membagi segmen rumah tangga berdasarkan **2 dimensi utama**: (1) *Stabilitas Hunian & Kesiapan Jaringan* (Menetap/Fiber-Ready vs Dinamis/Non-Fiber), dan (2) *Intensitas Digital & Daya Beli* (Basic/Entry, Family Entertainment, Prosumer/Gamer/WFH). |
-| **Q2. Peran IndiHome vs Orbit** | Risiko kanibalisasi jika Orbit dan IndiHome dijual ke target yang sama sebagai barang substitusi. | **Bukan substitusi, melainkan komplementer & berjenjang:**<br/>• **Orbit:** *Acquisition Spearhead & Flexible Broadband* (hunian sewa/dinamis, area *non-fiber port*, pemakaian musiman/prabayar).<br/>• **IndiHome:** *High-Capacity Digital Home Anchor* (keluarga menetap, penggunaan berat/simetris, multi-layar IPTV/OTT). |
-| **Q3. Akuisisi, Retensi & Peningkatan Nilai (ARPU/LTV)** | ARPU turun -10,1% (ke Rp213,5rb) karena proporsi 1P membesar dan perang harga. | • **Jalur Migrasi (*Graduation Pathway*):** *Orbit Prepaid $\to$ Orbit Postpaid $\to$ IndiHome Fiber $\to$ Telkomsel One Family*.<br/>• **Upgrading 1P ke 2P/3P & Niche Tier:** *STB Takeover*, *Multi-OTT*, *IndiHome Gamer*, & *HSMP*.<br/>• **FMC Lock-in:** Menaikkan penetrasi FMC dari 59% ke >70% lewat *Family Quota Sharing* di MyTelkomsel. |
-| **Q4. Implementasi, KPI & Estimasi Dampak Bisnis** | Pertumbuhan pelanggan +7,4% gagal menjadi pertumbuhan pendapatan (-1,6%). | • **Roadmap Bertahap** (Quick Wins Q1-Q2, Scale-Up Q3-Q4, Ecosystem Maturity Tahun 2).<br/>• **Kalkulasi Dampak:** Setiap kenaikan ARPU **+Rp10.000** pada basis 10,32 juta pelanggan = **+Rp1,24 Triliun pendapatan baru per tahun** tanpa perlu perang harga! |
+| **Q1. Segmentasi Rumah Tangga Prioritas** | Pelanggan rumah tangga diperlakukan seragam sehingga banyak yang memilih paket 1P termurah. | Membagi segmen rumah tangga berdasarkan **Data Geospasial ODP Fiber + Penggunaan Internet (*Usage*)**: *Flexible Starters*, *Flexible Growing Families*, *Stable Mainstream Families*, dan *Performance Households*. |
+| **Q2. Peran IndiHome vs Orbit** | Risiko kanibalisasi jika Orbit dan IndiHome dijual ke target yang sama sebagai barang substitusi. | **Dua mesin dalam satu perjalanan rumah tangga (*Home Ladder*):**<br/>• **Orbit:** Mesin fleksibilitas & pintu masuk di area belum *fiber-ready*.<br/>• **IndiHome:** Mesin stabilitas & performa tinggi untuk keluarga menetap di area *fiber-ready*. |
+| **Q3. Akuisisi, Retensi & Peningkatan Nilai (ARPU/LTV)** | ARPU turun -10,1% (ke Rp213,5rb) karena proporsi 1P membesar dan 41% pelanggan belum FMC. | • **Optimize:** Menaikkan nilai per koneksi (`Rp213K` $\to$ `+Entertainment Rp230K` $\to$ `+Upgrade Tier Rp250K`).<br/>• **Move Up:** Migrasi terukur dari Orbit ke IndiHome saat *fiber-ready* & menetap.<br/>• **Embed:** Menautkan seluler anggota keluarga + *Family Quota* + *Home Loyalty* untuk menekan *churn*. |
+| **Q4. Implementasi, KPI & Estimasi Dampak Bisnis** | Pertumbuhan pelanggan +7,4% gagal menjadi pertumbuhan pendapatan (-1,6%). | • **Roadmap 3 Fase Selama 5 Tahun (2026–2030)**.<br/>• **Kalkulasi Dampak:** Kenaikan ARPU +Rp25K (ke Rp238,5K) pada basis 10,3 juta pelanggan membuka **$\pm$Rp3,1 Triliun pendapatan tambahan tahunan** tanpa perang harga! |

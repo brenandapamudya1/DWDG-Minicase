@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype: Home Ladder Navigator (H.O.M.E.) - Telkomsel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased min-h-screen p-4 md:p-6">
+  <div class="max-w-6xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl p-5 md:p-6 shadow-2xl space-y-5">
+    <!-- Top Header & Mode Switch (Customer View vs Telkomsel View) -->
+    <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-400">Interactive Prototype</span>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300">Home Ladder: H.O.M.E.</span>
+        </div>
+        <h1 class="text-xl md:text-2xl font-bold mt-1.5">Home Ladder Navigator — Telkomsel Household Engine</h1>
+        <p class="text-slate-400 text-xs md:text-sm">LOKASI GEOSPASIAL + KUESIONER / USAGE → SEGMEN → Harmonize → Optimize → Move Up → Embed</p>
+      </div>
+
+      <!-- Mode Toggle: Customer vs Telkomsel View -->
+      <div class="flex items-center gap-2 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+        <button onclick="setAppMode('customer')" id="btn-mode-customer" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white transition">Customer View (4 Layar H.O.M.E.)</button>
+        <button onclick="setAppMode('telkomsel')" id="btn-mode-telkomsel" class="px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition">Telkomsel View (Khusus Juri / B2B)</button>
+      </div>
+    </div>
+
+    <!-- CUSTOMER VIEW -->
+    <div id="mode-customer" class="space-y-5">
+      <!-- Step Navigation Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-slate-950/70 p-2 rounded-xl border border-slate-800">
+        <button onclick="goStep('H')" id="step-btn-H" class="flex items-center gap-2.5 p-2.5 rounded-lg bg-rose-600 text-white text-left transition">
+          <span class="w-7 h-7 rounded-md bg-white/20 flex items-center justify-center font-bold text-sm">H</span>
+          <div>
+            <div class="text-xs font-bold">1. Harmonize</div>
+            <div class="text-xs opacity-80">Lokasi & 6 Kuesioner</div>
+          </div>
+        </button>
+        <button onclick="goStep('O')" id="step-btn-O" class="flex items-center gap-2.5 p-2.5 rounded-lg bg-slate-900 text-slate-300 hover:text-white text-left transition">
+          <span class="w-7 h-7 rounded-md bg-slate-800 flex items-center justify-center font-bold text-sm">O</span>
+          <div>
+            <div class="text-xs font-bold">2. Optimize</div>
+            <div class="text-xs opacity-80">Tangga Nilai & ARPU</div>
+          </div>
+        </button>
+        <button onclick="goStep('M')" id="step-btn-M" class="flex items-center gap-2.5 p-2.5 rounded-lg bg-slate-900 text-slate-300 hover:text-white text-left transition">
+          <span class="w-7 h-7 rounded-md bg-slate-800 flex items-center justify-center font-bold text-sm">M</span>
+          <div>
+            <div class="text-xs font-bold">3. Move Up</div>
+            <div class="text-xs opacity-80">Orbit Naik ke IndiHome</div>
+          </div>
+        </button>
+        <button onclick="goStep('E')" id="step-btn-E" class="flex items-center gap-2.5 p-2.5 rounded-lg bg-slate-900 text-slate-300 hover:text-white text-left transition">
+          <span class="w-7 h-7 rounded-md bg-slate-800 flex items-center justify-center font-bold text-sm">E</span>
+          <div>
+            <div class="text-xs font-bold">4. Embed</div>
+            <div class="text-xs opacity-80">FMC & Loyalitas Keluarga</div>
+          </div>
+        </button>
+      </div>
+
+      <!-- LAYAR 1: HARMONIZE -->
+      <div id="screen-H" class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <!-- Left: Geospatial + 6 Questions -->
+        <div class="lg:col-span-7 bg-slate-800/60 border border-slate-700/60 rounded-xl p-4 space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-sm font-bold text-rose-400 uppercase tracking-wider">A. Cek Geospasial Cakupan Kabel Fiber (Opt-In)</h2>
+            <span id="badge-geo" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Lokasimu Fiber-Ready (ODP &lt;150m)</span>
+          </div>
+
+          <!-- Schematic Coverage Map Selector -->
+          <div class="grid grid-cols-2 gap-3">
+            <button onclick="setGeo(true)" id="geo-btn-fiber" class="p-3 rounded-xl border-2 border-emerald-500 bg-emerald-500/10 text-left transition">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-emerald-400">Zona Hijau: Fiber-Ready</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+              </div>
+              <p class="text-xs text-slate-300 mt-1">Jaringan kabel FTTH IndiHome & 4G/5G Orbit tersedia di jalan rumahmu.</p>
+            </button>
+            <button onclick="setGeo(false)" id="geo-btn-cell" class="p-3 rounded-xl border border-slate-700 bg-slate-900/70 text-left transition">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-sky-400">Zona Biru: Belum Fiber-Ready</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Kabel fiber belum masuk/ODP penuh. Jaringan 4G/5G Orbit siap sekarang.</p>
+            </button>
+          </div>
+
+          <div class="border-t border-slate-700/70 pt-3">
+            <div class="flex items-center justify-between mb-2.5">
+              <h2 class="text-sm font-bold text-rose-400 uppercase tracking-wider">B. Kuesioner Kebutuhan Rumah Tangga (6 Pertanyaan)</h2>
+              <div class="flex gap-1">
+                <button onclick="loadPreset('starter')" class="text-xs px-2 py-0.5 rounded bg-slate-900 hover:bg-slate-700 text-slate-300">Preset: Anak Kos</button>
+                <button onclick="loadPreset('growing')" class="text-xs px-2 py-0.5 rounded bg-slate-900 hover:bg-slate-700 text-slate-300">Preset: Keluarga Baru</button>
+                <button onclick="loadPreset('mainstream')" class="text-xs px-2 py-0.5 rounded bg-slate-900 hover:bg-slate-700 text-slate-300">Preset: Keluarga Menetap</button>
+                <button onclick="loadPreset('performance')" class="text-xs px-2 py-0.5 rounded bg-slate-900 hover:bg-slate-700 text-slate-300">Preset: Gamer/WFH</button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+                <label class="block text-slate-400 mb-1">1. Status Hunian (Fleksibilitas)</label>
+                <select id="q1" onchange="evaluateHarmonize()" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-white font-medium">
+                  <option value="flex">Kos / Kontrak / Sewa</option>
+                  <option value="mid">Baru Pindah Rumah</option>
+                  <option value="stable" selected>Rumah Milik Sendiri (Menetap)</option>
+                </select>
+              </div>
+              <div class="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+                <label class="block text-slate-400 mb-1">2. Rencana Tinggal (Fleksibilitas)</label>
+                <select id="q2" onchange="evaluateHarmonize()" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-white font-medium">
+                  <option value="flex">&lt; 1 Tahun</option>
+                  <option value="mid">1 – 3 Tahun</option>
+                  <option value="stable" selected>&gt; 3 Tahun</option>
+                </select>
+              </div>
+              <div class="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+                <label class="block text-slate-400 mb-1">3. Jumlah Anggota & Perangkat</label>
+                <select id="q3" onchange="evaluateHarmonize()" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-white font-medium">
+                  <option value="low">1–2 Orang (1–3 Perangkat)</option>
+                  <option value="med" selected>3–5 Orang (4–8 Perangkat)</option>
+                  <option value="high">&gt; 5 Orang (9+ Perangkat)</option>
+                </select>
+              </div>
+              <div class="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+                <label class="block text-slate-400 mb-1">4. Aktivitas Utama Internet</label>
+                <select id="q4" onchange="evaluateHarmonize()" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-white font-medium">
+                  <option value="low">Sosmed & Browsing Ringan</option>
+                  <option value="med" selected>Streaming Keluarga & Kerja/Belajar</option>
+                  <option value="high">Gaming Kompetitif / Konten 4K / WFH Berat</option>
+                </select>
+              </div>
+              <div class="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+                <label class="block text-slate-400 mb-1">5. Pentingnya Koneksi Stabil Tanpa Jeda</label>
+                <select id="q5" onchange="evaluateHarmonize()" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-white font-medium">
+                  <option value="low">Standar (Bisa Toleransi Kuota)</option>
+                  <option value="med" selected>Penting untuk Keluarga</option>
+                  <option value="high">Sangat Kritis (Zero Downtime)</option>
+                </select>
+              </div>
+              <div class="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+                <label class="block text-slate-400 mb-1">6. Layanan Rumah Sekarang (Titik Awal)</label>
+                <select id="q6" onchange="evaluateHarmonize()" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-white font-medium">
+                  <option value="none">Belum Punya Wi-Fi Rumah</option>
+                  <option value="orbit">Sudah Pakai Telkomsel Orbit</option>
+                  <option value="indihome" selected>Sudah Pakai IndiHome (Single-Play)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Output Card Layar 1 -->
+        <div class="lg:col-span-5 bg-slate-800/80 border border-slate-700 rounded-xl p-5 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Output Layar 1: Hasil Harmonize</div>
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-700 space-y-2">
+              <div class="text-xs text-slate-400">Segmen Rumah Tangga Kamu:</div>
+              <div id="out-seg-name" class="text-xl font-bold text-emerald-400">Stable Mainstream Families</div>
+              <div id="out-seg-pos" class="text-xs font-semibold text-amber-400">"Reliable Digital Home Experience"</div>
+              <p id="out-seg-desc" class="text-xs text-slate-300 leading-relaxed pt-1">Keluarga menetap dengan banyak perangkat dan aktivitas streaming/belajar rutin di area yang sudah Fiber-Ready.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 space-y-1.5">
+              <div class="text-xs text-rose-300 font-semibold">Rekomendasi Mesin Konektivitas:</div>
+              <div id="out-prod-rec" class="text-lg font-bold text-white">IndiHome (Fiber Broadband)</div>
+              <p id="out-geo-note" class="text-xs text-slate-300">Lokasi kamu sudah Fiber-Ready. IndiHome memberikan koneksi stabil tanpa khawatir kehabisan kuota.</p>
+            </div>
+          </div>
+
+          <button onclick="goStep('O')" class="w-full py-2.5 px-4 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs transition">
+            Lanjut ke Layar 2: OPTIMIZE (Tangga Nilai) →
+          </button>
+        </div>
+      </div>
+
+      <!-- LAYAR 2: OPTIMIZE -->
+      <div id="screen-O" class="hidden space-y-4">
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 class="text-base font-bold text-white">Layar 2: OPTIMIZE — Tangga Nilai Per Koneksi (Menjawab Akar 2)</h2>
+              <p class="text-xs text-slate-400">Menaikkan ARPU lewat tambahan value sesuai pola pemakaian (Rule-Based Usage), bukan menaikkan tarif dasar.</p>
+            </div>
+            <div class="bg-slate-900 px-4 py-2.5 rounded-xl border border-slate-700 text-right">
+              <div class="text-xs text-slate-400">Indikator ARPU Rumah Tangga:</div>
+              <div id="opt-arpu-val" class="text-xl font-bold text-emerald-400">Rp213.500 <span class="text-xs font-normal text-slate-400">/ bln</span></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Rung 1 -->
+            <div onclick="selectOptimizeRung(1)" id="rung-1" class="cursor-pointer p-4 rounded-xl border-2 border-emerald-500 bg-slate-900 space-y-2 transition">
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">Tangga 1 (Baseline 1P)</span>
+                <span class="text-sm font-bold text-white">Rp213K / bln</span>
+              </div>
+              <div class="text-sm font-bold text-emerald-400">Konektivitas Dasar Saja</div>
+              <p class="text-xs text-slate-400">Internet rumah standar tanpa layanan tambahan (kondisi awal mayoritas pelanggan single-play).</p>
+            </div>
+
+            <!-- Rung 2 -->
+            <div onclick="selectOptimizeRung(2)" id="rung-2" class="cursor-pointer p-4 rounded-xl border border-slate-700 bg-slate-900/70 space-y-2 hover:border-slate-500 transition">
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold px-2 py-0.5 rounded bg-sky-500/20 text-sky-400">Tangga 2 (+Rp16,5K)</span>
+                <span class="text-sm font-bold text-sky-400">Rp230K / bln</span>
+              </div>
+              <div class="text-sm font-bold text-white">+ Entertainment Bundle</div>
+              <p class="text-xs text-slate-300"><strong>Trigger Usage:</strong> Trafik video streaming keluarga tinggi. Dapat akses Multi-OTT pilihan (hemat >50% dibanding beli eceran).</p>
+            </div>
+
+            <!-- Rung 3 -->
+            <div onclick="selectOptimizeRung(3)" id="rung-3" class="cursor-pointer p-4 rounded-xl border border-slate-700 bg-slate-900/70 space-y-2 hover:border-slate-500 transition">
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-400">Tangga 3 (+Rp36,5K)</span>
+                <span class="text-sm font-bold text-amber-400">Rp250K / bln</span>
+              </div>
+              <div class="text-sm font-bold text-white">+ Upgrade Speed Tier & Loyalty</div>
+              <p class="text-xs text-slate-300"><strong>Trigger Usage:</strong> Banyak perangkat aktif bersamaan di jam malam / gaming. Kecepatan naik + Bonus Loyalitas Speed Tahunan.</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center pt-2">
+            <span class="text-xs text-slate-400">Klik anak tangga di atas untuk melihat simulasi kenaikan ARPU dari Value Expansion.</span>
+            <button onclick="goStep('M')" class="py-2 px-4 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs transition">Lanjut ke Layar 3: MOVE UP →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAYAR 3: MOVE UP -->
+      <div id="screen-M" class="hidden space-y-4">
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 class="text-base font-bold text-white">Layar 3: MOVE UP — Kesiapan Migrasi Orbit ke IndiHome</h2>
+              <p class="text-xs text-slate-400">Mengubah kanibalisasi menjadi siklus hidup: pengguna Orbit naik kelas ke IndiHome secara sukarela saat 3 sinyal terpenuhi.</p>
+            </div>
+            <span id="moveup-status-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400">Status: SIAP NAIK KE INDIHOME (3/3 Sinyal Terpenuhi)</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold text-slate-300">Sinyal 1: Status Fiber-Ready</span>
+                <input type="checkbox" id="chk-sig1" checked onchange="updateMoveUp()" class="w-4 h-4 accent-emerald-500" />
+              </div>
+              <p class="text-xs text-slate-400">Sumber: Lapisan peta geospasial mendeteksi jaringan ODP IndiHome baru telah aktif di jalan rumah pengguna Orbit.</p>
+            </div>
+
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold text-slate-300">Sinyal 2: Intensitas Pemakaian Tinggi</span>
+                <input type="checkbox" id="chk-sig2" checked onchange="updateMoveUp()" class="w-4 h-4 accent-emerald-500" />
+              </div>
+              <p class="text-xs text-slate-400">Sumber: Telemetri usage menunjukkan pemakaian Orbit &gt;150 GB/bln atau kuota sering habis sebelum akhir bulan.</p>
+            </div>
+
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 space-y-2">
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold text-slate-300">Sinyal 3: Hunian Menetap</span>
+                <input type="checkbox" id="chk-sig3" checked onchange="updateMoveUp()" class="w-4 h-4 accent-emerald-500" />
+              </div>
+              <p class="text-xs text-slate-400">Sumber: Kuesioner / durasi langganan menunjukkan keluarga tinggal menetap (&gt;1 tahun) di lokasi tersebut.</p>
+            </div>
+          </div>
+
+          <div id="moveup-offer-card" class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex flex-wrap items-center justify-between gap-4">
+            <div class="space-y-1">
+              <div class="text-sm font-bold text-emerald-400">Tawaran Paket Naik Kelas (Bundel FMC Tanpa Jeda Koneksi)</div>
+              <div class="text-xs text-slate-200">• <strong>Tanpa Friction:</strong> Internet Orbit tetap aktif sampai IndiHome terpasang penuh oleh teknisi.</div>
+              <div class="text-xs text-slate-200">• <strong>Benefit Loyalitas:</strong> Gratis biaya pasang (hemat Rp500rb) & masa loyalitas Orbit langsung dihitung di IndiHome.</div>
+            </div>
+            <button onclick="goStep('E')" class="py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition"> Ambil Paket & Lanjut ke EMBED →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAYAR 4: EMBED -->
+      <div id="screen-E" class="hidden space-y-4">
+        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 class="text-base font-bold text-white">Layar 4: EMBED — Ekosistem FMC Keluarga & Kejelasan Loyalitas</h2>
+              <p class="text-xs text-slate-400">Menautkan nomor seluler keluarga ke koneksi rumah untuk membuka benefit loyalitas dan menekan churn.</p>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400" id="embed-tier-badge">Tier Loyalitas: HOME FAMILY VIP</span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <div class="lg:col-span-6 bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-4">
+              <div>
+                <div class="flex justify-between text-xs mb-1.5">
+                  <span class="text-slate-300 font-semibold">Jumlah Nomor Mobile Anggota Keluarga yang Ditautkan:</span>
+                  <span id="lbl-fam-lines" class="font-bold text-rose-400">3 Nomor (Ayah, Ibu, Anak)</span>
+                </div>
+                <input type="range" id="inp-fam-lines" min="1" max="5" value="3" oninput="updateEmbed()" class="w-full accent-rose-500 cursor-pointer" />
+                <div class="flex justify-between text-xs text-slate-500 mt-1"><span>1 Nomor</span><span>3 Nomor (Ideal)</span><span>5 Nomor</span></div>
+              </div>
+
+              <div class="space-y-2 pt-1 text-xs">
+                <div class="font-bold text-slate-300">Benefit Keluarga & Loyalitas yang Terbuka (Unlocked):</div>
+                <div class="p-2.5 rounded-lg bg-slate-800/90 flex justify-between">
+                  <span>1. Kuota Keluarga Bersama (Shared Family Quota)</span>
+                  <span id="ben-quota" class="font-bold text-emerald-400">30 GB/bln (Senilai Rp60rb)</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-800/90 flex justify-between">
+                  <span>2. Bundling Entertainment Keluarga (TV & HP)</span>
+                  <span id="ben-ott" class="font-bold text-emerald-400">Multi-OTT (Senilai Rp45rb)</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-800/90 flex justify-between">
+                  <span>3. Loyalitas Tenure (+10 Mbps/thn & VIP Care &lt;6 Jam)</span>
+                  <span id="ben-loyalty" class="font-bold text-emerald-400">VIP Benefit (Senilai Rp40rb)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Switching Cost / Value Lost Indicator -->
+            <div class="lg:col-span-6 bg-rose-950/30 border border-rose-500/30 p-4 rounded-xl flex flex-col justify-between space-y-3">
+              <div class="space-y-2">
+                <div class="text-xs font-bold uppercase tracking-wider text-rose-400">Indikator "Biaya Berpindah" (Mengapa Churn Turun Drastis)</div>
+                <div class="text-sm text-slate-200">Total Nilai Benefit Ekosistem yang Diterima Keluarga Ini:</div>
+                <div id="out-switching-val" class="text-2xl font-bold text-emerald-400">Rp145.000 / bulan</div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Jika keluarga ini tergoda pindah ke Wi-Fi kompetitor yang lebih murah <strong>Rp25.000/bulan</strong>, mereka akan kehilangan Kuota Keluarga, Akses OTT, dan Bonus Kecepatan Loyalitas senilai <strong id="out-loss-inline">Rp145.000/bulan</strong>.
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-400">Kesimpulan bagi Pelanggan:</span> Pindah ke kompetitor justru membuat pengeluaran total keluarga <strong>rugi bersih <span id="out-net-loss">Rp120.000</span>/bulan</strong>!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TELKOMSEL VIEW (KHUSUS JURI / B2B) -->
+    <div id="mode-telkomsel" class="hidden space-y-5">
+      <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-base font-bold text-sky-400">Telkomsel Executive View — Peta Geospasial Segmen & Funnel H.O.M.E.</h2>
+            <p class="text-xs text-slate-400">Menunjukkan bagaimana data lokasi ODP dan usage dipakai Telkomsel untuk mengeksekusi migrasi & menjaga KPI.</p>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-400 border border-slate-700">*Simulasi Data Geospasial & Funnel</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+          <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400">Target ARPU (Tahun 3)</div>
+            <div class="text-lg font-bold text-emerald-400 mt-0.5">Rp213,5K → Rp238,5K</div>
+            <div class="text-xs text-slate-400">+Rp25K/pelanggan (≈ +Rp3,1 T/thn)</div>
+          </div>
+          <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400">Target Move Up (Orbit → IndiHome)</div>
+            <div class="text-lg font-bold text-sky-400 mt-0.5">450.000 Rumah</div>
+            <div class="text-xs text-slate-400">~38% dari ~1,18 Jt Base Orbit</div>
+          </div>
+          <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400">Penetrasi FMC (Embed)</div>
+            <div class="text-lg font-bold text-amber-400 mt-0.5">59% → 73%</div>
+            <div class="text-xs text-slate-400">+1,9 Juta Rumah Tangga FMC</div>
+          </div>
+          <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400">Penurunan Monthly Churn</div>
+            <div class="text-lg font-bold text-rose-400 mt-0.5">-45 bps (Bulanan)</div>
+            <div class="text-xs text-slate-400">Dari ~1,20% ke ~0,75% / bulan</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2.5">
+            <div class="text-xs font-bold text-white uppercase tracking-wider">Distribusi Segmen & Area "Migration-Ready"</div>
+            <div class="space-y-2 text-xs">
+              <div class="flex justify-between"><span>• Flexible Starters (Orbit Murni - Zona Biru/Kos)</span><span class="font-bold text-sky-400">~730K Rumah Tangga</span></div>
+              <div class="flex justify-between"><span>• Flexible Growing (Orbit di Area Baru Fiber - Target Move Up)</span><span class="font-bold text-amber-400">~450K Rumah Tangga (Migration-Ready)</span></div>
+              <div class="flex justify-between"><span>• Stable Mainstream (IndiHome - Target Optimize & Embed)</span><span class="font-bold text-emerald-400">~8,6 Juta Rumah Tangga</span></div>
+              <div class="flex justify-between"><span>• Performance Households (IndiHome High-Tier + Orbit Backup)</span><span class="font-bold text-rose-400">~1,7 Juta Rumah Tangga</span></div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2.5">
+            <div class="text-xs font-bold text-white uppercase tracking-wider">Funnel Terukur "Move Up" (Orbit → IndiHome FMC)</div>
+            <div class="space-y-1.5 text-xs">
+              <div>1. <strong>Eligible (Fiber-Ready + Usage Tinggi + Menetap):</strong> 620.000 Rumah Tangga Orbit</div>
+              <div>2. <strong>Dijangkau (In-App Navigator + WhatsApp Concierge):</strong> 560.000 Rumah Tangga (90%)</div>
+              <div>3. <strong>Menerima Tawaran Bundel FMC:</strong> 475.000 Rumah Tangga (85%)</div>
+              <div class="text-emerald-400 font-bold">4. Terpasang IndiHome Tanpa Jeda: 450.000 Rumah Tangga (95% Fulfillment)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let isFiberReady = true;
+
+    function setAppMode(mode) {
+      document.getElementById('mode-customer').classList.toggle('hidden', mode !== 'customer');
+      document.getElementById('mode-telkomsel').classList.toggle('hidden', mode !== 'telkomsel');
+      document.getElementById('btn-mode-customer').className = mode === 'customer'
+        ? 'px-3.5 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white transition'
+        : 'px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition';
+      document.getElementById('btn-mode-telkomsel').className = mode === 'telkomsel'
+        ? 'px-3.5 py-1.5 rounded-lg text-xs font-bold bg-sky-600 text-white transition'
+        : 'px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition';
+    }
+
+    function goStep(step) {
+      ['H', 'O', 'M', 'E'].forEach(s => {
+        document.getElementById('screen-' + s).classList.toggle('hidden', s !== step);
+        document.getElementById('step-btn-' + s).className = s === step
+          ? 'flex items-center gap-2.5 p-2.5 rounded-lg bg-rose-600 text-white text-left transition'
+          : 'flex items-center gap-2.5 p-2.5 rounded-lg bg-slate-900 text-slate-300 hover:text-white text-left transition';
+      });
+    }
+
+    function setGeo(fiber) {
+      isFiberReady = fiber;
+      document.getElementById('geo-btn-fiber').className = fiber
+        ? 'p-3 rounded-xl border-2 border-emerald-500 bg-emerald-500/10 text-left transition'
+        : 'p-3 rounded-xl border border-slate-700 bg-slate-900/70 text-left transition';
+      document.getElementById('geo-btn-cell').className = !fiber
+        ? 'p-3 rounded-xl border-2 border-sky-500 bg-sky-500/10 text-left transition'
+        : 'p-3 rounded-xl border border-slate-700 bg-slate-900/70 text-left transition';
+      const badge = document.getElementById('badge-geo');
+      badge.textContent = fiber ? 'Lokasimu Fiber-Ready (ODP <150m)' : 'Belum Fiber-Ready (Orbit Tersedia Sekarang)';
+      badge.className = fiber
+        ? 'text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400'
+        : 'text-xs font-semibold px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-400';
+      evaluateHarmonize();
+    }
+
+    function loadPreset(type) {
+      if (type === 'starter') {
+        setGeo(false);
+        document.getElementById('q1').value = 'flex';
+        document.getElementById('q2').value = 'flex';
+        document.getElementById('q3').value = 'low';
+        document.getElementById('q4').value = 'low';
+        document.getElementById('q5').value = 'low';
+        document.getElementById('q6').value = 'none';
+      } else if (type === 'growing') {
+        setGeo(false);
+        document.getElementById('q1').value = 'mid';
+        document.getElementById('q2').value = 'mid';
+        document.getElementById('q3').value = 'med';
+        document.getElementById('q4').value = 'med';
+        document.getElementById('q5').value = 'med';
+        document.getElementById('q6').value = 'orbit';
+      } else if (type === 'mainstream') {
+        setGeo(true);
+        document.getElementById('q1').value = 'stable';
+        document.getElementById('q2').value = 'stable';
+        document.getElementById('q3').value = 'med';
+        document.getElementById('q4').value = 'med';
+        document.getElementById('q5').value = 'med';
+        document.getElementById('q6').value = 'indihome';
+      } else if (type === 'performance') {
+        setGeo(true);
+        document.getElementById('q1').value = 'stable';
+        document.getElementById('q2').value = 'stable';
+        document.getElementById('q3').value = 'high';
+        document.getElementById('q4').value = 'high';
+        document.getElementById('q5').value = 'high';
+        document.getElementById('q6').value = 'indihome';
+      }
+      evaluateHarmonize();
+    }
+
+    function evaluateHarmonize() {
+      const q1 = document.getElementById('q1').value;
+      const q2 = document.getElementById('q2').value;
+      const q3 = document.getElementById('q3').value;
+      const q4 = document.getElementById('q4').value;
+      const q5 = document.getElementById('q5').value;
+
+      const isFlex = (q1 === 'flex' || q2 === 'flex' || q1 === 'mid');
+      const digScore = (q3 === 'high' ? 2 : q3 === 'med' ? 1 : 0) + (q4 === 'high' ? 2 : q4 === 'med' ? 1 : 0) + (q5 === 'high' ? 2 : q5 === 'med' ? 1 : 0);
+
+      let seg = '', pos = '', desc = '', prod = '', geoNote = '';
+      if (isFlex && digScore <= 2) {
+        seg = 'Flexible Starters';
+        pos = '"Instant & Movable Home Wi-Fi"';
+        desc = 'Hunian kos/kontrak atau baru pindah dengan kebutuhan internet praktis yang bisa dibawa pindah kapan saja.';
+        prod = 'Telkomsel Orbit';
+        geoNote = 'Orbit langsung aktif tanpa perlu instalasi kabel atau kontrak panjang.';
+      } else if (isFlex && digScore > 2) {
+        seg = 'Flexible Growing Families';
+        pos = '"Flexible Connectivity that Can Grow"';
+        desc = 'Keluarga berkembang dengan aktivitas digital menengah-tinggi yang membutuhkan koneksi fleksibel hari ini dan siap naik ke Fiber.';
+        prod = 'Orbit → IndiHome (Target Move Up)';
+        geoNote = 'Mulai dengan Orbit sekarang, dan otomatis mendapat prioritas Move Up ke IndiHome saat menetap & Fiber-Ready.';
+      } else if (!isFlex && digScore >= 5) {
+        seg = 'Performance Households';
+        pos = '"High-Performance Digital Home"';
+        desc = 'Rumah tangga dengan banyak perangkat, gaming kompetitif, atau WFH kritis yang menuntut kecepatan tinggi & koneksi anti-putus.';
+        prod = isFiberReady ? 'IndiHome High-Tier + Orbit Backup' : 'Orbit High-Quota sekarang → Auto-Notify IndiHome Fiber';
+        geoNote = isFiberReady ? 'Lokasi Fiber-Ready! Kombinasi IndiHome Fiber + Orbit Backup menjamin Zero Downtime.' : 'Karena lokasi belum Fiber-Ready, sistem menempatkanmu di Orbit sekarang & mengaktifkan pengingat otomatis saat kabel Fiber masuk!';
+      } else {
+        seg = 'Stable Mainstream Families';
+        pos = '"Reliable Digital Home Experience"';
+        desc = 'Keluarga menetap dengan banyak perangkat dan kebutuhan streaming/belajar rutin yang membutuhkan koneksi rumah stabil.';
+        prod = isFiberReady ? 'IndiHome (Fiber Broadband)' : 'Orbit sekarang → Prioritas Move Up ke IndiHome';
+        geoNote = isFiberReady ? 'Lokasi kamu sudah Fiber-Ready. IndiHome adalah mesin utama yang paling tepat.' : 'Segmenmu cocok IndiHome, namun karena lokasi belum Fiber-Ready, gunakan Orbit sekarang & kamu otomatis masuk antrean Move Up!';
+      }
+
+      document.getElementById('out-seg-name').textContent = seg;
+      document.getElementById('out-seg-pos').textContent = pos;
+      document.getElementById('out-seg-desc').textContent = desc;
+      document.getElementById('out-prod-rec').textContent = prod;
+      document.getElementById('out-geo-note').textContent = geoNote;
+    }
+
+    function selectOptimizeRung(r) {
+      [1, 2, 3].forEach(i => {
+        document.getElementById('rung-' + i).className = i === r
+          ? 'cursor-pointer p-4 rounded-xl border-2 border-emerald-500 bg-slate-900 space-y-2 transition'
+          : 'cursor-pointer p-4 rounded-xl border border-slate-700 bg-slate-900/70 space-y-2 hover:border-slate-500 transition';
+      });
+      const vals = {1: 'Rp213.500', 2: 'Rp230.000 (+Rp16,5K)', 3: 'Rp250.000 (+Rp36,5K)'};
+      document.getElementById('opt-arpu-val').innerHTML = vals[r] + ' <span class="text-xs font-normal text-slate-400">/ bln</span>';
+    }
+
+    function updateMoveUp() {
+      const s1 = document.getElementById('chk-sig1').checked;
+      const s2 = document.getElementById('chk-sig2').checked;
+      const s3 = document.getElementById('chk-sig3').checked;
+      const count = (s1 ? 1 : 0) + (s2 ? 1 : 0) + (s3 ? 1 : 0);
+      const badge = document.getElementById('moveup-status-badge');
+      const card = document.getElementById('moveup-offer-card');
+      if (count === 3) {
+        badge.textContent = 'Status: SIAP NAIK KE INDIHOME (3/3 Sinyal Terpenuhi)';
+        badge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400';
+        card.className = 'p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex flex-wrap items-center justify-between gap-4';
+      } else {
+        badge.textContent = 'Status: TETAP DI ORBIT DULU (' + count + '/3 Sinyal Terpenuhi — Tidak Dipaksa Pindah)';
+        badge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400';
+        card.className = 'p-4 rounded-xl bg-slate-900 border border-slate-700 flex flex-wrap items-center justify-between gap-4 opacity-75';
+      }
+    }
+
+    function updateEmbed() {
+      const lines = parseInt(document.getElementById('inp-fam-lines').value);
+      const labels = {
+        1: '1 Nomor (Pribadi)',
+        2: '2 Nomor (Suami & Istri)',
+        3: '3 Nomor (Ayah, Ibu, 1 Anak)',
+        4: '4 Nomor (Ayah, Ibu, 2 Anak)',
+        5: '5 Nomor (Seluruh Rumah Tangga)'
+      };
+      document.getElementById('lbl-fam-lines').textContent = labels[lines];
+      const quotaGB = lines * 10;
+      const quotaVal = lines * 20;
+      const ottVal = lines >= 2 ? 45 : 25;
+      const loyVal = lines >= 3 ? 40 : 20;
+      const totalVal = quotaVal + ottVal + loyVal;
+      const netLoss = totalVal - 25;
+
+      document.getElementById('ben-quota').textContent = quotaGB + ' GB/bln (Senilai Rp' + quotaVal + 'rb)';
+      document.getElementById('ben-ott').textContent = 'Multi-OTT (Senilai Rp' + ottVal + 'rb)';
+      document.getElementById('ben-loyalty').textContent = 'VIP Benefit (Senilai Rp' + loyVal + 'rb)';
+      document.getElementById('out-switching-val').textContent = 'Rp' + totalVal + '.000 / bulan';
+      document.getElementById('out-loss-inline').textContent = 'Rp' + totalVal + '.000/bulan';
+      document.getElementById('out-net-loss').textContent = 'Rp' + netLoss + '.000';
+    }
+  </script>
+</body>
+</html>
