@@ -3,20 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prototype: Home Ladder Navigator (H.O.M.E.) - Telkomsel</title>
+  <title>Prototype: MyTelkomsel H.O.M.E. (Home Ladder Navigator)</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased min-h-screen p-4 md:p-6">
   <div class="max-w-6xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl p-5 md:p-6 shadow-2xl space-y-5">
     <!-- Top Header & Mode Switch (Customer View vs Telkomsel View) -->
     <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
-      <div>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-400">Interactive Prototype</span>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300">Home Ladder: H.O.M.E.</span>
+      <div class="flex items-center gap-3.5">
+        <!-- Official SVG Logo: MyTelkomsel H.O.M.E. -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-2xl shadow-lg">
+          <defs>
+            <linearGradient id="tselGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#B91C1C" />
+              <stop offset="50%" stop-color="#E60012" />
+              <stop offset="100%" stop-color="#FF4D00" />
+            </linearGradient>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FDE047" />
+              <stop offset="100%" stop-color="#EAB308" />
+            </linearGradient>
+          </defs>
+          <rect x="4" y="4" width="112" height="112" rx="26" fill="#020617" stroke="#334155" stroke-width="3"/>
+          <path d="M22 54 L60 22 L98 54" fill="none" stroke="url(#tselGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="28" y="76" width="12" height="18" rx="3" fill="#0EA5E9" />
+          <rect x="45" y="66" width="12" height="28" rx="3" fill="#10B981" />
+          <rect x="62" y="54" width="12" height="40" rx="3" fill="url(#tselGrad)" />
+          <rect x="79" y="42" width="12" height="52" rx="3" fill="url(#goldGrad)" />
+        </svg>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-400">MyTelkomsel Super-App Feature</span>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300">Framework: H.O.M.E.</span>
+          </div>
+          <h1 class="text-xl md:text-2xl font-bold mt-1.5">MyTelkomsel H.O.M.E. <span class="text-rose-400 font-semibold text-base md:text-lg">(Home Ladder Navigator)</span></h1>
+          <p class="text-slate-400 text-xs md:text-sm">LOKASI GEOSPASIAL + KUESIONER / USAGE → SEGMEN → Harmonize → Optimize → Move Up → Embed (Milestone Bronze–Silver–Gold)</p>
         </div>
-        <h1 class="text-xl md:text-2xl font-bold mt-1.5">Home Ladder Navigator — Telkomsel Household Engine</h1>
-        <p class="text-slate-400 text-xs md:text-sm">LOKASI GEOSPASIAL + KUESIONER / USAGE → SEGMEN → Harmonize → Optimize → Move Up → Embed</p>
       </div>
 
       <!-- Mode Toggle: Customer vs Telkomsel View -->

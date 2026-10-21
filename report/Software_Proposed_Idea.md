@@ -1,6 +1,7 @@
-# Software & Prototype Proposal: "Home Ladder Navigator" (H.O.M.E.)
-**Nama Prototype:** **Home Ladder Navigator — *Interactive Household Placement & Lifecycle Engine***  
-**Sumber Konsep:** Sheet 2 Google Docs (*Prototype HOME*) + Penyempurnaan Data Geospasial, Telemetri & Loyalitas  
+# Software & Prototype Proposal: "MyTelkomsel H.O.M.E. (Home Ladder Navigator)"
+**Nama Resmi Prototype:** **MyTelkomsel H.O.M.E. (*Home Ladder Navigator*)**  
+**Tagline:** *Interactive Household Placement, Lifecycle & Milestone Loyalty Engine*  
+**Sumber Konsep:** Sheet 2 Google Docs (*Prototype HOME*) + Penyempurnaan Data Geospasial, Telemetri & Milestone Loyalitas (Bronze–Silver–Gold)  
 **File Terkait:**
 - [Proposed_Solution.md](file:///home/brenandacaesa/PROJECT/DWDG/report/Proposed_Solution.md)
 - [prototype_home_ladder_navigator.html](file:///home/brenandacaesa/PROJECT/DWDG/report/prototype_home_ladder_navigator.html) *(Prototipe Web Interaktif Siap Pakai)*
@@ -9,7 +10,7 @@
 
 ## 1. Ide Inti & Peran Prototype di Dalam Pitch Deck
 
-**Home Ladder Navigator** adalah fitur cerdas (dapat diintegrasikan di dalam aplikasi **MyTelkomsel** / portal web akuisisi rumah tangga Telkomsel) yang menempatkan setiap rumah tangga di anak tangga **H.O.M.E.** yang tepat:
+**MyTelkomsel H.O.M.E. (*Home Ladder Navigator*)** adalah fitur cerdas di dalam *super-app* **MyTelkomsel** (serta portal web akuisisi rumah tangga Telkomsel) yang menempatkan setiap rumah tangga di anak tangga **H.O.M.E.** yang tepat:
 - **Data Geospasial Lokasi** menentukan **apa yang bisa dilayani** oleh infrastruktur Telkomsel di titik rumah tersebut (*Fiber-Ready* untuk IndiHome vs *Cellular-Only* untuk Orbit).
 - **Kuesioner Singkat (untuk pelanggan baru) / Telemetri Pemakaian (untuk pelanggan lama)** menentukan **apa yang dibutuhkan** oleh rumah tangga tersebut (Segmen).
 - Hasilnya ditindaklanjuti secara mulus melalui **4 Layar H.O.M.E. (*Harmonize $\to$ Optimize $\to$ Move Up $\to$ Embed*)** ditambah **1 Tampilan Bisnis (*Telkomsel View*)** untuk manajemen Telkomsel.

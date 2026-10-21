@@ -1,10 +1,12 @@
 # Proposed Solution & Strategic Review: "Home Ladder (H.O.M.E.)"
 **Topik Kasus:** *Connecting Every Home: Optimizing Telkomsel’s Household Connectivity Portfolio*  
-**Kerangka Utama:** **Home Ladder: H.O.M.E. (*Harmonize $\to$ Optimize $\to$ Move Up $\to$ Embed*)**  
+**Kerangka Strategi:** **Home Ladder: H.O.M.E. (*Harmonize $\to$ Optimize $\to$ Move Up $\to$ Embed*)**  
+**Nama Prototype Software:** **MyTelkomsel H.O.M.E. (*Home Ladder Navigator*)**  
 **Referensi:**
 - Draf Google Docs: *NewSolution-HOME (Solusi HOME & Prototype HOME)*
 - [bedah_data_dan_masalah_dwdg.md](file:///home/brenandacaesa/PROJECT/DWDG/report/bedah_data_dan_masalah_dwdg.md)
 - [Software_Proposed_Idea.md](file:///home/brenandacaesa/PROJECT/DWDG/report/Software_Proposed_Idea.md)
+- [prototype_home_ladder_navigator.html](file:///home/brenandacaesa/PROJECT/DWDG/report/prototype_home_ladder_navigator.html)
 - [gantt_chart_5_years.png](file:///home/brenandacaesa/PROJECT/DWDG/figure/gantt_chart_5_years.png)
 
 ---
