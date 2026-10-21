@@ -281,27 +281,61 @@
         <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 space-y-4">
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <h2 class="text-base font-bold text-white">Layar 4: EMBED — Ekosistem FMC Keluarga & Kejelasan Loyalitas</h2>
-              <p class="text-xs text-slate-400">Menautkan nomor seluler keluarga ke koneksi rumah untuk membuka benefit loyalitas dan menekan churn.</p>
+              <h2 class="text-base font-bold text-white">Layar 4: EMBED — Milestone Loyalitas Keluarga (Bronze → Silver → Gold)</h2>
+              <p class="text-xs text-slate-400">Pendekatan gamifikasi ala Shopee Member: progres terbuka saat pelanggan naik anak tangga H.O.M.E. & menautkan nomor keluarga.</p>
             </div>
-            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400" id="embed-tier-badge">Tier Loyalitas: HOME FAMILY VIP</span>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40" id="embed-tier-badge">🥇 MILESTONE: GOLD FAMILY VIP</span>
+          </div>
+
+          <!-- Shopee-Style Milestone Progress Bar -->
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-bold text-slate-200">Progres Milestone Rumah Tangga (Home Ladder Loyalty):</span>
+              <span id="milestone-mission-text" class="text-emerald-400 font-semibold">🎉 Seluruh Misi Selesai! Milestone Tertinggi (Gold) Aktif</span>
+            </div>
+            <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+              <div id="milestone-progress-bar" class="bg-gradient-to-r from-amber-600 via-slate-300 to-yellow-400 h-full transition-all duration-300" style="width: 100%"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
+              <div id="tier-card-bronze" class="p-3 rounded-xl border border-amber-700/50 bg-slate-900/60 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-amber-500">🥉 BRONZE (Starter)</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Tahap H (1 Nomor)</span>
+                </div>
+                <p class="text-[11px] text-slate-400">1 koneksi rumah aktif. Voucher kuota darurat 5 GB & poin bayar tepat waktu (~Rp15rb/bln).</p>
+              </div>
+              <div id="tier-card-silver" class="p-3 rounded-xl border border-slate-400/50 bg-slate-900/60 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-slate-200">🥈 SILVER (Upgrader)</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Tahap O & M (2 Nomor)</span>
+                </div>
+                <p class="text-[11px] text-slate-400">Naik tier/add-on atau migrasi Orbit→IndiHome. Gratis instalasi Rp500rb + Speed Boost +10 Mbps (~Rp65rb/bln).</p>
+              </div>
+              <div id="tier-card-gold" class="p-3 rounded-xl border-2 border-yellow-400 bg-yellow-500/10 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-yellow-400">🥇 GOLD (Family VIP)</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300">Tahap E (≥3 Nomor)</span>
+                </div>
+                <p class="text-[11px] text-slate-200">Tautkan ≥3 nomor keluarga. Klaim Kuota Keluarga 30–50 GB/bln + Multi-OTT + VIP Care &lt;6 jam (~Rp145rb/bln).</p>
+              </div>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
             <div class="lg:col-span-6 bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-4">
               <div>
                 <div class="flex justify-between text-xs mb-1.5">
-                  <span class="text-slate-300 font-semibold">Jumlah Nomor Mobile Anggota Keluarga yang Ditautkan:</span>
-                  <span id="lbl-fam-lines" class="font-bold text-rose-400">3 Nomor (Ayah, Ibu, Anak)</span>
+                  <span class="text-slate-300 font-semibold">Simulasikan Jumlah Nomor Keluarga yang Ditautkan (Misi Milestone):</span>
+                  <span id="lbl-fam-lines" class="font-bold text-rose-400">3 Nomor (Ayah, Ibu, 1 Anak)</span>
                 </div>
                 <input type="range" id="inp-fam-lines" min="1" max="5" value="3" oninput="updateEmbed()" class="w-full accent-rose-500 cursor-pointer" />
-                <div class="flex justify-between text-xs text-slate-500 mt-1"><span>1 Nomor</span><span>3 Nomor (Ideal)</span><span>5 Nomor</span></div>
+                <div class="flex justify-between text-xs text-slate-500 mt-1"><span>1 Nomor (Bronze)</span><span>2 Nomor (Silver)</span><span>≥3 Nomor (Gold VIP)</span></div>
               </div>
 
               <div class="space-y-2 pt-1 text-xs">
-                <div class="font-bold text-slate-300">Benefit Keluarga & Loyalitas yang Terbuka (Unlocked):</div>
+                <div class="font-bold text-slate-300">Dompet Benefit Bulanan yang Bisa Diklaim Keluarga:</div>
                 <div class="p-2.5 rounded-lg bg-slate-800/90 flex justify-between">
-                  <span>1. Kuota Keluarga Bersama (Shared Family Quota)</span>
+                  <span>1. Klaim Kuota Keluarga Bersama (Shared Family Quota)</span>
                   <span id="ben-quota" class="font-bold text-emerald-400">30 GB/bln (Senilai Rp60rb)</span>
                 </div>
                 <div class="p-2.5 rounded-lg bg-slate-800/90 flex justify-between">
@@ -309,8 +343,8 @@
                   <span id="ben-ott" class="font-bold text-emerald-400">Multi-OTT (Senilai Rp45rb)</span>
                 </div>
                 <div class="p-2.5 rounded-lg bg-slate-800/90 flex justify-between">
-                  <span>3. Loyalitas Tenure (+10 Mbps/thn & VIP Care &lt;6 Jam)</span>
-                  <span id="ben-loyalty" class="font-bold text-emerald-400">VIP Benefit (Senilai Rp40rb)</span>
+                  <span>3. Benefit Milestone (+10 Mbps/thn & VIP Care &lt;6 Jam)</span>
+                  <span id="ben-loyalty" class="font-bold text-emerald-400">Gold VIP (Senilai Rp40rb)</span>
                 </div>
               </div>
             </div>
@@ -318,15 +352,15 @@
             <!-- Switching Cost / Value Lost Indicator -->
             <div class="lg:col-span-6 bg-rose-950/30 border border-rose-500/30 p-4 rounded-xl flex flex-col justify-between space-y-3">
               <div class="space-y-2">
-                <div class="text-xs font-bold uppercase tracking-wider text-rose-400">Indikator "Biaya Berpindah" (Mengapa Churn Turun Drastis)</div>
-                <div class="text-sm text-slate-200">Total Nilai Benefit Ekosistem yang Diterima Keluarga Ini:</div>
+                <div class="text-xs font-bold uppercase tracking-wider text-rose-400">Efek Psikologis "Takut Turun Kasta" (Loss Aversion ala Shopee)</div>
+                <div class="text-sm text-slate-200">Total Nilai Benefit Milestone yang Diterima Keluarga Ini:</div>
                 <div id="out-switching-val" class="text-2xl font-bold text-emerald-400">Rp145.000 / bulan</div>
                 <p class="text-xs text-slate-300 leading-relaxed">
-                  Jika keluarga ini tergoda pindah ke Wi-Fi kompetitor yang lebih murah <strong>Rp25.000/bulan</strong>, mereka akan kehilangan Kuota Keluarga, Akses OTT, dan Bonus Kecepatan Loyalitas senilai <strong id="out-loss-inline">Rp145.000/bulan</strong>.
+                  Jika keluarga ini tergoda pindah ke Wi-Fi kompetitor yang lebih murah <strong>Rp25.000/bulan</strong>, status Milestone mereka gugur dan mereka kehilangan Kuota Keluarga, Akses OTT, serta prioritas VIP senilai <strong id="out-loss-inline">Rp145.000/bulan</strong>.
                 </p>
               </div>
               <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs">
-                <span class="font-bold text-amber-400">Kesimpulan bagi Pelanggan:</span> Pindah ke kompetitor justru membuat pengeluaran total keluarga <strong>rugi bersih <span id="out-net-loss">Rp120.000</span>/bulan</strong>!
+                <span class="font-bold text-amber-400">Kesimpulan bagi Pelanggan:</span> Pindah ke kompetitor justru membuat pengeluaran total keluarga <strong id="out-net-loss-label">rugi bersih <span id="out-net-loss">Rp120.000</span>/bulan</strong>!
               </div>
             </div>
           </div>
@@ -544,23 +578,60 @@
     function updateEmbed() {
       const lines = parseInt(document.getElementById('inp-fam-lines').value);
       const labels = {
-        1: '1 Nomor (Pribadi)',
-        2: '2 Nomor (Suami & Istri)',
-        3: '3 Nomor (Ayah, Ibu, 1 Anak)',
-        4: '4 Nomor (Ayah, Ibu, 2 Anak)',
-        5: '5 Nomor (Seluruh Rumah Tangga)'
+        1: '1 Nomor (Pribadi — Tier Bronze)',
+        2: '2 Nomor (Suami & Istri — Tier Silver)',
+        3: '3 Nomor (Ayah, Ibu, 1 Anak — Tier Gold)',
+        4: '4 Nomor (Ayah, Ibu, 2 Anak — Tier Gold)',
+        5: '5 Nomor (Seluruh Rumah Tangga — Tier Gold)'
       };
       document.getElementById('lbl-fam-lines').textContent = labels[lines];
       const quotaGB = lines * 10;
       const quotaVal = lines * 20;
       const ottVal = lines >= 2 ? 45 : 25;
-      const loyVal = lines >= 3 ? 40 : 20;
+      const loyVal = lines >= 3 ? 40 : (lines === 2 ? 20 : 10);
       const totalVal = quotaVal + ottVal + loyVal;
       const netLoss = totalVal - 25;
 
+      const badge = document.getElementById('embed-tier-badge');
+      const mission = document.getElementById('milestone-mission-text');
+      const bar = document.getElementById('milestone-progress-bar');
+      const cBronze = document.getElementById('tier-card-bronze');
+      const cSilver = document.getElementById('tier-card-silver');
+      const cGold = document.getElementById('tier-card-gold');
+
+      const baseCard = 'p-3 rounded-xl border border-slate-700 bg-slate-900/60 space-y-1 opacity-75 transition';
+      cBronze.className = baseCard;
+      cSilver.className = baseCard;
+      cGold.className = baseCard;
+
+      if (lines === 1) {
+        badge.textContent = '🥉 MILESTONE: BRONZE STARTER';
+        badge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-amber-700/30 text-amber-400 border border-amber-600/40';
+        mission.textContent = '🎯 Misi ke Silver: Naik Tier/Add-On atau tautkan +1 nomor keluarga lagi!';
+        mission.className = 'text-amber-400 font-semibold';
+        bar.style.width = '34%';
+        cBronze.className = 'p-3 rounded-xl border-2 border-amber-500 bg-amber-500/10 space-y-1 transition';
+        document.getElementById('ben-loyalty').textContent = 'Bronze Starter (Senilai Rp' + loyVal + 'rb)';
+      } else if (lines === 2) {
+        badge.textContent = '🥈 MILESTONE: SILVER UPGRADER';
+        badge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-slate-400/20 text-slate-200 border border-slate-400/40';
+        mission.textContent = '🔥 1 Langkah Lagi ke Gold: Tautkan 1 nomor anak/keluarga lagi untuk buka VIP Care & 30GB!';
+        mission.className = 'text-sky-400 font-semibold';
+        bar.style.width = '68%';
+        cSilver.className = 'p-3 rounded-xl border-2 border-slate-300 bg-slate-400/10 space-y-1 transition';
+        document.getElementById('ben-loyalty').textContent = 'Silver Upgrader (Senilai Rp' + loyVal + 'rb)';
+      } else {
+        badge.textContent = '🥇 MILESTONE: GOLD FAMILY VIP';
+        badge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-400/50';
+        mission.textContent = '🎉 Seluruh Misi Selesai! Milestone Tertinggi (Gold) Aktif';
+        mission.className = 'text-emerald-400 font-semibold';
+        bar.style.width = '100%';
+        cGold.className = 'p-3 rounded-xl border-2 border-yellow-400 bg-yellow-500/10 space-y-1 transition';
+        document.getElementById('ben-loyalty').textContent = 'Gold VIP (Senilai Rp' + loyVal + 'rb)';
+      }
+
       document.getElementById('ben-quota').textContent = quotaGB + ' GB/bln (Senilai Rp' + quotaVal + 'rb)';
       document.getElementById('ben-ott').textContent = 'Multi-OTT (Senilai Rp' + ottVal + 'rb)';
-      document.getElementById('ben-loyalty').textContent = 'VIP Benefit (Senilai Rp' + loyVal + 'rb)';
       document.getElementById('out-switching-val').textContent = 'Rp' + totalVal + '.000 / bulan';
       document.getElementById('out-loss-inline').textContent = 'Rp' + totalVal + '.000/bulan';
       document.getElementById('out-net-loss').textContent = 'Rp' + netLoss + '.000';

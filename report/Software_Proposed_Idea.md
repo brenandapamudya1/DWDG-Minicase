@@ -78,15 +78,16 @@ Khusus untuk segmen berbasis **Orbit** (*Flexible Starters* & *Flexible Growing 
 
 ---
 
-### Layar 4: **EMBED** (*Ekosistem FMC Keluarga, Loyalitas & Kalkulator "Biaya Berpindah"*)
-Layar ini menjawab secara konkret bagaimana ekosistem menahan *churn* dan memberikan **kejelasan loyalitas**:
-- **Simulasi Jumlah Anggota Keluarga:** Pengguna menggeser *slider* jumlah nomor seluler Telkomsel anggota keluarga yang ditautkan (misal: Ayah + Ibu + 2 Anak = 4 Nomor Seluler).
-- **Rincian Benefit & Loyalitas Keluarga yang Terbuka (*Unlocked*):**
+### Layar 4: **EMBED** (*Ekosistem FMC Keluarga, Milestone `Bronze → Silver → Gold` & Kalkulator "Biaya Berpindah"*)
+Layar ini menjawab secara konkret bagaimana ekosistem menahan *churn* melalui pendekatan **Milestone Tiering ala Shopee (`🥉 Bronze` $\to$ `🥈 Silver` $\to$ `🥇 Gold`)**:
+- **Visual *Milestone Progress Bar*:** Menampilkan posisi kasta rumah tangga saat ini (**🥉 Bronze** di tahap *Harmonize*, **🥈 Silver** saat *Optimize/Move Up*, dan **🥇 Gold** saat mencapai *Embed* $\ge 3$ nomor keluarga) lengkap dengan indikator misi menuju level berikutnya.
+- **Simulasi Jumlah Anggota Keluarga:** Pengguna menggeser *slider* jumlah nomor seluler Telkomsel anggota keluarga yang ditautkan (misal: 1 nomor = **🥉 Bronze**, 2 nomor = **🥈 Silver**, 3–5 nomor = **🥇 Gold**).
+- **Rincian Benefit Bulanan Milestone 🥇 GOLD yang Terbuka (*Unlocked*):**
   1. **Kuota Keluarga Bersama (*Shared Family Quota*):** 30 GB/bulan (Senilai `Rp60.000/bln`).
   2. **Akses Hiburan Multi-Layar Keluarga:** OTT TV & HP (Senilai `Rp45.000/bln`).
-  3. **Benefit Loyalitas Tahunan (*Home Family VIP*):** Gratis *speed upgrade* tahunan +10 Mbps, garansi perbaikan VIP $<6\text{ jam}$, dan 2x Telkomsel Poin (Senilai `Rp40.000/bln`).
-- **Indikator Kunci — "Kalkulator Nilai yang Hilang Jika Pindah (*Switching Loss Meter*)":**
-  - Menampilkan perbandingan terang-benderang: *"Jika keluarga Anda pindah ke kompetitor yang diskon Rp25.000/bulan, keluarga Anda justru **kehilangan benefit senilai Rp145.000/bulan** (Rugi bersih Rp120.000/bulan)."*
+  3. **Benefit Loyalitas Gold (*Speed Boost* +10 Mbps/thn & Teknisi VIP $<6\text{ jam}$):** (Senilai `Rp40.000/bln`).
+- **Indikator Kunci — "Kalkulator Nilai yang Hilang Jika Turun Kasta / Pindah (*Switching Loss Meter*)":**
+  - Menampilkan perbandingan terang-benderang: *"Jika keluarga Anda pindah ke kompetitor yang diskon Rp25.000/bulan, status **🥇 GOLD** Anda gugur dan keluarga Anda justru **kehilangan benefit senilai Rp145.000/bulan** (Rugi bersih Rp120.000/bulan)."*
 
 ---
 

@@ -112,21 +112,27 @@ flowchart LR
   4. **Zero-Friction & Zero-Downtime:** Modem Orbit tetap aktif sampai teknisi selesai mengaktifkan IndiHome di rumah. Modem Orbit lama ditarik kembali untuk **direkondisi (*refurbished*)** bagi pelanggan Orbit baru di area *non-fiber* lain.
   5. **Guardrail Penting:** Pengguna Orbit yang masih tinggal di kos/berpindah-pindah (*Flexible Starters*) **tidak dipaksa pindah** ke IndiHome.
 
-### Anak Tangga 4: **E — Embed** (*Tertanam di Ekosistem FMC + Kejelasan Loyalitas Keluarga*)
-Di draf awal, bagian **loyalitas dan benefit** masih bersifat umum. Berikut adalah rancangan konkret **"Home Ladder Loyalty & Family Benefit"** yang membuat pelanggan sukarela bertahan dan menciptakan **Biaya Berpindah (*Switching Cost*) yang terukur**:
+### Anak Tangga 4: **E — Embed** (*Tertanam di Ekosistem FMC + Loyalitas Berbasis Milestone: Bronze, Silver, Gold*)
+Agar mekanisme loyalitas mudah dipahami pelanggan dan mendorong mereka naik tangga secara sukarela, Telkomsel mengadopsi **psikologi *Milestone Progress Bar* (seperti Shopee Member: *Bronze $\to$ Silver $\to$ Gold*)**. Kenaikan kasta tidak ditentukan dari mahalnya tarif dasar, melainkan dari **pencapaian anak tangga H.O.M.E.** oleh satu rumah tangga:
 
-#### Tabel Struktur Benefit & Loyalitas "Home Ladder" (Kejelasan Benefit per Anak Tangga)
+```mermaid
+flowchart LR
+    B["🥉 BRONZE MILESTONE<br/>(Tahap H: Harmonize)<br/>• Syarat: 1 Koneksi Rumah<br/>• Benefit: Early Payment Bonus<br/>  (Senilai ~Rp15K/bln)"] -->|Misi: Tambah Add-On (Optimize)<br/>atau Naik Orbit ke IndiHome (Move Up)| S["🥈 SILVER MILESTONE<br/>(Tahap O & M: Optimize / Move Up)<br/>• Syarat: +Entertainment/Tier atau Move Up<br/>• Benefit: Voucher OTT + Speed Boost<br/>  + Gratis Pasang (Senilai ~Rp65K/bln)"]
+    S -->|Misi: Tautkan >=3 Nomor HP<br/>Anggota Keluarga (Embed FMC)| G["🥇 GOLD MILESTONE<br/>(Tahap E: Embed — Full FMC)<br/>• Syarat: Rumah + >=3 Line Mobile Keluarga<br/>• Benefit: Kuota Keluarga 30GB + Multi-OTT<br/>  + Teknisi VIP <6 Jam (Senilai ~Rp145K/bln)"]
+```
 
-| Level Tangga H.O.M.E. | Nama Tier Loyalitas Rumah | Syarat Keterikatan Rumah Tangga | Benefit Konkret yang Diterima Keluarga (*Tangible Benefits*) | Nilai Ekonomi Benefit bagi Pelanggan (Rp/Bln) |
-| :--- | :--- | :--- | :--- | :---: |
-| **Level 1 (H)** | **Home Starter** | 1 Koneksi Rumah (Orbit atau IndiHome 1P) + Bayar Tepat Waktu | • **Early Payment Reward:** Bayar tagihan sebelum tanggal 10 dapat bonus kuota Orbit 10 GB atau *Speed Boost* IndiHome 3 hari.<br/>• Poin Telkomsel reguler. | **~Rp15.000 / bln** |
-| **Level 2 (O & M)** | **Home Plus** | Pelanggan yang naik ke *Entertainment/Upgrade Tier* **ATAU** naik dari *Orbit ke IndiHome (Move Up)* | • **Tenure Speed Boost Gratis:** Kenaikan kecepatan permanen **+10 Mbps gratis** setiap genap 1 tahun berlangganan.<br/>• **Tenure Carryover (Khusus *Move Up*):** Masa langganan saat memakai Orbit **tetap dihitung** saat pindah ke IndiHome + Gratis Biaya Pasang (hemat Rp500.000) + Diskon 50% akses OTT pilihan. | **~Rp65.000 / bln** |
-| **Level 3 (E)** | **Home Family VIP (*Embedded FMC*)** | Broadband Rumah + $\ge 3$ Nomor Mobile Keluarga (Ortu & Anak) dalam 1 Ekosistem | • **Shared Family Quota:** Kuota bersama keluarga **25–40 GB/bulan** untuk seluruh HP anggota rumah.<br/>• **Free Family Entertainment:** Akses *Multi-OTT* keluarga di TV & HP.<br/>• **VIP Home Care & Prestige:** Garansi perbaikan jaringan prioritas $<6\text{ jam}$ + 2x Telkomsel Poin seluruh anggota keluarga. | **~Rp145.000 / bln** |
+#### Tabel Milestone Loyalitas "Home Ladder" (`Bronze` $\to$ `Silver` $\to$ `Gold`)
+
+| Milestone Tier | Posisi di Tangga H.O.M.E. & Misi Pencapaian (*Progress Bar*) | Benefit Rutin Bulanan yang Bisa Diklaim Keluarga | Nilai Benefit (Rp/Bln) |
+| :--- | :--- | :--- | :---: |
+| **🥉 BRONZE**<br/>*(Starter)* | • **Posisi:** Tahap **H (*Harmonize*)** — Baru memiliki 1 koneksi rumah (Orbit atau IndiHome 1P).<br/>• *Misi ke Silver:* Ambil 1 *add-on* (*Optimize*) atau migrasi Orbit $\to$ IndiHome (*Move Up*). | • **Voucher Bayar Tepat Waktu:** Bayar sebelum tanggal 10 dapat klaim kuota Orbit 10 GB atau *Speed Boost* IndiHome 3 hari.<br/>• 1x Poin Rumah Tangga reguler. | **~Rp15.000 / bln** |
+| **🥈 SILVER**<br/>*(Climber)* | • **Posisi:** Tahap **O (*Optimize*)** atau **M (*Move Up*)** — Pelanggan naik ke paket *+Entertainment / +Upgrade Tier*, atau naik kelas dari Orbit ke IndiHome.<br/>• *Misi ke Gold:* Tautkan minimal 3 nomor HP anggota keluarga (*Embed*). | • **Carryover Masa Aktif Orbit:** Saat *Move Up* dari Orbit ke IndiHome, masa aktif Orbit tidak hangus (langsung jadi Silver) + **Gratis Biaya Pasang Rp500.000**.<br/>• **Bonus Kecepatan Tahunan:** Gratis **+10 Mbps permanen** tiap 12 bulan & diskon 50% voucher OTT.<br/>• 1,5x Poin Rumah Tangga. | **~Rp65.000 / bln** |
+| **🥇 GOLD**<br/>*(Embedded Family)* | • **Posisi:** Tahap **E (*Embed*)** — Koneksi rumah + **$\ge 3$ nomor seluler anggota keluarga** (Ayah, Ibu, Anak) tertaut dalam satu akun rumah tangga. | • **Jatah Kuota Keluarga Tiap Bulan:** Otomatis dapat **30–40 GB Shared Family Quota** untuk HP seluruh anggota rumah.<br/>• **Bundel Hiburan Keluarga & VIP Care:** Akses *Multi-OTT* keluarga + garansi teknisi prioritas **$<6\text{ jam}$** + 2x Poin sekeluarga. | **~Rp145.000 / bln** |
 
 > [!NOTE]
-> **Simulasi "Biaya Berpindah" (*Switching Cost*) di Layar 4 Prototype:**  
-> Mengapa pelanggan di tahap **Embed (Level 3)** tidak akan tergoda pindah ke ISP kompetitor yang menawarkan diskon Rp25.000/bulan?  
-> Karena jika mereka memutus langganan rumah Telkomsel, satu keluarga tersebut akan **kehilangan benefit senilai Rp145.000/bulan** (harus beli kuota HP sendiri-sendiri Rp75rb + kehilangan bonus kecepatan tahunan Rp30rb + kehilangan akses OTT keluarga Rp40rb). **Artinya: Pindah ke kompetitor murah justru membuat pengeluaran total keluarga membengkak +Rp120.000/bulan!**
+> **Mengapa Pendekatan Milestone (`Bronze $\to$ Silver $\to$ Gold`) Sangat Kuat Menekan *Churn*?**  
+> 1. **Efek Gamifikasi (*Goal-Gradient Effect*):** Seperti di aplikasi *e-commerce* (Shopee), pelanggan yang melihat *progress bar* *"Tinggal tautkan 1 nomor HP anak lagi untuk naik dari Silver ke Gold dan buka Kuota Keluarga 30 GB!"* akan terdorong melengkapi ekosistem rumahnya sendiri tanpa perlu dipaksa *sales*.  
+> 2. **Efek Takut Turun Kasta (*Loss Aversion* di Layar 4 Prototype):** Jika rumah tangga berstatus **🥇 GOLD** pindah ke ISP kompetitor yang diskon Rp25.000/bulan, status Gold mereka gugur dan keluarga tersebut **kehilangan jatah benefit Rp145.000/bulan** (**rugi bersih Rp120.000/bulan**).
 
 ---
 
