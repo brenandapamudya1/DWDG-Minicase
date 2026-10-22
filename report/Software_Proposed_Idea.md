@@ -13,21 +13,20 @@
 **MyTelkomsel H.O.M.E. (*Home Ladder Navigator*)** adalah fitur cerdas di dalam *super-app* **MyTelkomsel** (serta portal web akuisisi rumah tangga Telkomsel) yang menempatkan setiap rumah tangga di anak tangga **H.O.M.E.** yang tepat:
 - **Data Geospasial Lokasi** menentukan **apa yang bisa dilayani** oleh infrastruktur Telkomsel di titik rumah tersebut (*Fiber-Ready* untuk IndiHome vs *Cellular-Only* untuk Orbit).
 - **Kuesioner Singkat (untuk pelanggan baru) / Telemetri Pemakaian (untuk pelanggan lama)** menentukan **apa yang dibutuhkan** oleh rumah tangga tersebut (Segmen).
-- Hasilnya ditindaklanjuti secara mulus melalui **4 Layar H.O.M.E. (*Harmonize $\to$ Optimize $\to$ Move Up $\to$ Embed*)** ditambah **1 Tampilan Bisnis (*Telkomsel View*)** untuk manajemen Telkomsel.
+- Hasilnya ditindaklanjuti secara mulus melalui **4 Layar Perjalanan Pelanggan H.O.M.E. (*Harmonize $\to$ Optimize $\to$ Move Up $\to$ Embed*)** yang 100% berfokus pada *Customer View* (pengalaman nyata pengguna di dalam aplikasi).
 
 ```mermaid
 flowchart LR
     LOC["1. Input Geospasial<br/>(Cek Cakupan Fiber vs Cellular)"] & QUIZ["2. Kuesioner 6 Pertanyaan<br/>/ Data Usage Telemetry"] --> SEG["Penentuan Segmen<br/>(4 Segmen Rumah Tangga)"]
     SEG --> L1["Layar 1: HARMONIZE<br/>Rekomendasi Orbit vs IndiHome"]
-    L1 --> L2["Layar 2: OPTIMIZE<br/>Tangga Nilai & Simulasi ARPU"]
+    L1 --> L2["Layar 2: OPTIMIZE<br/>Tangga Nilai & Paket Rumah"]
     L2 --> L3["Layar 3: MOVE UP<br/>Radar Kesiapan Migrasi Orbit->Fiber"]
-    L3 --> L4["Layar 4: EMBED<br/>Bundel Keluarga, Loyalitas &<br/>Kalkulator 'Biaya Berpindah'"]
-    L4 -.-> B2B["Toggle Khusus Juri:<br/>TELKOMSEL VIEW (GIS & KPI)"]
+    L3 --> L4["Layar 4: EMBED<br/>Milestone Bronze-Silver-Gold &<br/>Kalkulator 'Biaya Berpindah'"]
 ```
 
 ---
 
-## 2. Spesifikasi 4 Layar Utama + 1 Layar Juri (*Telkomsel View*)
+## 2. Spesifikasi 4 Layar Utama (*100% Customer View*)
 
 ### Layar 1: **HARMONIZE** (*Geospasial Lokasi + Kuesioner 1 Menit*)
 
@@ -61,16 +60,15 @@ flowchart LR
 ### Layar 2: **OPTIMIZE** (*Tangga Nilai / Value Ladder*)
 Menampilkan tangga peningkatan nilai yang disesuaikan dengan segmen pengguna (bukan katalog produk yang membingungkan):
 1. **Anak Tangga Dasar — Konektivitas Saja (`Rp213.500 / bln`):** Internet rumah sesuai segmen.
-2. **Anak Tangga Kedua — `+ Entertainment Bundle` (`Rp230.000 / bln` | `Uplift +Rp16.500`):** Ditawarkan karena sistem mendeteksi aktivitas *streaming* keluarga tinggi (mendapat akses paket OTT pilihan + *Tenure Loyalty Point*).
+2. **Anak Tangga Kedua — `+ Entertainment Bundle` (`Rp230.000 / bln` | `Uplift +Rp16.500`):** Ditawarkan karena sistem mendeteksi aktivitas *streaming* keluarga tinggi (mendapat akses paket OTT pilihan + naik ke Milestone **🥈 Silver**).
 3. **Anak Tangga Ketiga — `+ Upgrade Speed / Gamer Tier` (`Rp250.000 / bln` | `Uplift +Rp36.500`):** Ditawarkan untuk rumah dengan banyak perangkat simultan atau kebutuhan *gaming/WFH* (*Higher Speed More Price* + bonus loyalitas kecepatan tahunan +10 Mbps).
-- **Fitur Visual Penting:** Terdapat *live meter* **"ARPU Rumah Tangga"** yang bergerak naik dari `Rp213,5K` $\to$ `Rp230K` $\to$ `Rp250K`, membuktikan kepada juri bahwa kenaikan ARPU berasal dari **penambahan nilai (*value expansion*)**, bukan kenaikan harga dasar.
 
 ---
 
 ### Layar 3: **MOVE UP** (*Radar Kesiapan Migrasi Orbit $\to$ IndiHome*)
 Khusus untuk segmen berbasis **Orbit** (*Flexible Starters* & *Flexible Growing Families*), layar ini menampilkan **3 Indikator Sinyal Migrasi**:
 1. **Sinyal 1 — Status *Fiber-Ready*:** Diambil dari lapisan peta geospasial (Hijau = ODP IndiHome sudah tersedia di alamat rumah).
-2. **Sinyal 2 — Intensitas Pemakaian (*Usage*):** Diambil dari kuesioner atau *slider* simulasi pemakaian bulanan (Hijau = pemakaian $>150\text{ GB/bulan}$ atau kuota sering habis).
+2. **Sinyal 2 — Intensitas Pemakaian (*Usage*):** Diambil dari kuesioner atau *slider* simulasi pemakaian bulanan (Hijau = pemakaian tinggi atau kuota sering habis).
 3. **Sinyal 3 — Kesiapan Menetap:** Diambil dari profil hunian (Hijau = rencana tinggal $>1\text{ tahun}$).
 - **Output Layar 3:** Jika ketiga sinyal menyala Hijau, muncul kartu **"Siap Naik Kelas ke IndiHome (FMC Bundle)"** dengan 3 jaminan bebas friksi:
   - *Gratis biaya pasang (hemat Rp500.000) & masa loyalitas Orbit ikut terbawa.*
@@ -90,10 +88,3 @@ Layar ini menjawab secara konkret bagaimana ekosistem menahan *churn* melalui pe
 - **Indikator Kunci — "Kalkulator Nilai yang Hilang Jika Turun Kasta / Pindah (*Switching Loss Meter*)":**
   - Menampilkan perbandingan terang-benderang: *"Jika keluarga Anda pindah ke kompetitor yang diskon Rp25.000/bulan, status **🥇 GOLD** Anda gugur dan keluarga Anda justru **kehilangan benefit senilai Rp145.000/bulan** (Rugi bersih Rp120.000/bulan)."*
 
----
-
-### Mode Khusus Juri: **TELKOMSEL VIEW** (*B2B Executive Toggle*)
-Satu tombol *toggle* di pojok kanan atas aplikasi yang mengubah tampilan dari sisi pelanggan (*Customer View*) menjadi **Dashboard Manajemen Telkomsel**:
-- **Peta Sebaran Segmen & Zona *Migration-Ready*:** Menampilkan titik-titik rumah tangga pengguna Orbit yang kini berada di area *Fiber-Ready* (target langsung kampanye **Move Up**).
-- **Funnel Konversi Move Up Terukur:** `Eligible (Memenuhi 3 Sinyal)` $\to$ `Dijangkau` $\to$ `Menerima Tawaran` $\to$ `Terpasang IndiHome`.
-- **Ringkasan Dampak KPI Korporat:** Pergerakan ARPU (`Rp213,5K` $\to$ `Rp238,5K`), Penetrasi FMC (`59%` $\to$ `73%`), Target Migrasi (`450K`), dan Penurunan *Churn* (`-45 bps`).

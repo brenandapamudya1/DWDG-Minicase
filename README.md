@@ -11,7 +11,8 @@
 ```
 DWDG/
 ├── references/   → Bahan sumber lomba
-├── report/       → Analisis, solusi, dan prototipe
+├── report/       → Analisis, solusi, dan prototipe HTML
+├── prototype/    → Prototipe aplikasi TypeScript + React (siap deploy Vercel)
 ├── figure/       → Gambar pendukung (Gantt chart)
 ├── design/       → Panduan logo & UI/UX
 └── powerpoint/   → Rencana pitch deck
@@ -30,8 +31,15 @@ DWDG/
 | [bedah_data_dan_masalah_dwdg.md](report/bedah_data_dan_masalah_dwdg.md) | Bedah data & akar masalah dari casebook dan Annual Report |
 | [Proposed_Solution.md](report/Proposed_Solution.md) | **Dokumen utama solusi H.O.M.E.**: segmentasi, kompetitor, loyalitas Bronze–Silver–Gold, GTM, risiko, KPI, roadmap |
 | [Software_Proposed_Idea.md](report/Software_Proposed_Idea.md) | Spesifikasi prototipe MyTelkomsel H.O.M.E. |
-| [prototype_home_ladder_navigator.html](report/prototype_home_ladder_navigator.html) | Prototipe interaktif (buka di browser) |
+| [prototype_home_ladder_navigator.html](report/prototype_home_ladder_navigator.html) | Prototipe interaktif versi file HTML tunggal |
 | [dashboard_visualisasi_dwdg.html](report/dashboard_visualisasi_dwdg.html) | Dashboard visualisasi data (buka di browser) |
+
+### `prototype/` — Aplikasi TypeScript + React (Siap Deploy Vercel)
+| File / Folder | Isi |
+| :--- | :--- |
+| [src/App.tsx](prototype/src/App.tsx) | Shell mobile super-app MyTelkomsel H.O.M.E. (Customer View 4 layar) |
+| [src/components/](prototype/src/components/) | 4 layar interaktif: `[H] Harmonize`, `[O] Optimize`, `[M] Move Up`, `[E] Embed` |
+| [vercel.json](prototype/vercel.json) & [package.json](prototype/package.json) | Konfigurasi build Vite + TypeScript + Tailwind CSS untuk Vercel |
 
 ### `figure/` — Gambar
 | File | Isi |
@@ -54,5 +62,5 @@ DWDG/
 ## Mulai dari Mana?
 1. **Pahami masalah** → [bedah_data_dan_masalah_dwdg.md](report/bedah_data_dan_masalah_dwdg.md)
 2. **Pahami solusi** → [Proposed_Solution.md](report/Proposed_Solution.md)
-3. **Lihat demo** → buka [prototype_home_ladder_navigator.html](report/prototype_home_ladder_navigator.html) di browser
+3. **Jalankan prototipe TypeScript** → masuk ke folder [prototype/](prototype/) (`npm install && npm run dev`) atau deploy ke Vercel
 4. **Susun slide** → [PITCHDECK.md](powerpoint/PITCHDECK.md)

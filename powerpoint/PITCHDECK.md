@@ -57,7 +57,7 @@
 | **4** | Analysis | Orbit & IndiHome melayani fase hidup rumah tangga yang berbeda — dan pesaing belum menghubungkannya | Segmentation 2×2 + Capability Matrix → **Key Insight** |
 | **5** | Strategy | H.O.M.E.: mengubah dua produk yang bersaing menjadi satu tangga perjalanan rumah tangga | Diagram tangga 4 anak tangga |
 | **6** | Strategy | Cara kerja tiap anak tangga: dari penempatan tepat hingga loyalitas Bronze–Silver–Gold | 4 kolom mekanisme + Milestone |
-| **7** | Strategy | MyTelkomsel H.O.M.E.: tangga ini berjalan di aplikasi yang sudah dipakai pelanggan | Mockup 4 layar + Telkomsel View |
+| **7** | Strategy | MyTelkomsel H.O.M.E.: tangga ini berjalan di aplikasi yang sudah dipakai pelanggan | Mockup 4 layar HP (H · O · M · E) |
 | **8** | Implementation | Roadmap 5 tahun, 3 fase, dengan GTM dan mitigasi risiko | Gantt + GTM strip + 3 risiko utama |
 | **9** | Implementation | Dampak terukur: ARPU kembali ke Rp238,5K, FMC 73%, churn −45 bps | KPI table + rumus revenue |
 | **10** | Conclusion | Dari pertumbuhan jumlah menjadi pertumbuhan nilai | Recap H.O.M.E. + punchline + CTA |
@@ -188,16 +188,15 @@
 ---
 
 ### SLIDE 7 — Prototype: MyTelkomsel H.O.M.E.
-**Action title:** *Tangga ini berjalan di MyTelkomsel — tanpa aplikasi baru, langsung menjangkau pelanggan yang sudah ada.*
+**Action title:** *Tangga ini berjalan langsung di aplikasi MyTelkomsel — 100% berfokus pada perjalanan pelanggan dari memilih paket hingga mencapai Gold VIP.*
 
-**Layout (ala Afa hlm. 6 "UI/UX"):** 4 mockup HP berjajar + 1 mockup laptop.
-1. **Layar H** — peta zona fiber + kuesioner → rekomendasi produk & segmen.
-2. **Layar O** — 3 kartu tangga nilai + ARPU berubah real-time.
-3. **Layar M** — radar 3 sinyal kesiapan migrasi.
-4. **Layar E** — progress bar Bronze → Silver → Gold + kalkulator "rugi jika pindah".
-5. **Telkomsel View (laptop)** — distribusi segmen, funnel Move Up (620K eligible → 450K terpasang), KPI.
+**Layout (ala Afa hlm. 6 "UI/UX"):** **4 Mockup Layar Pelanggan (H · O · M · E) Berjajar Ukuran Besar:**
+1. **Layar 1 (`[H] Harmonize`)** — Cek lokasi geospasial (Zona Fiber vs Non-Fiber) + 6 kuesioner cepat → keluar rekomendasi segmen & produk yang pas.
+2. **Layar 2 (`[O] Optimize`)** — 3 kartu tangga nilai (*Connectivity Only* $\to$ *+Entertainment* $\to$ *+Productivity/Gaming*).
+3. **Layar 3 (`[M] Move Up`)** — Radar 3 sinyal kesiapan migrasi Orbit $\to$ IndiHome dengan jaminan *Zero-Downtime* & gratis instalasi Rp500K.
+4. **Layar 4 (`[E] Embed`)** — *Progress bar* Milestone (`🥉 Bronze` $\to$ `🥈 Silver` $\to$ `🥇 Gold`) + kalkulator *"Rugi bersih Rp120K/bln jika pindah ke kompetitor"*.
 
-**Bawah:** *User journey* 1 baris (Cek lokasi → Dapat rekomendasi → Upgrade → Naik ke IndiHome → Tautkan keluarga → Gold).  
+**Bawah:** *Customer User Journey* 1 baris (`Cek Lokasi & Kuesioner` $\to$ `Rekomendasi Tepat (Bronze)` $\to$ `Upgrade/Migrasi Tanpa Jeda (Silver)` $\to$ `Tautkan Keluarga & Buka Benefit (Gold VIP)`).  
 **Sumber screenshot:** [prototype_home_ladder_navigator.html](file:///home/brenandacaesa/PROJECT/DWDG/report/prototype_home_ladder_navigator.html). Siapkan QR code ke demo jika diperbolehkan.
 
 ---

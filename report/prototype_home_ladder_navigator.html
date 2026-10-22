@@ -41,14 +41,14 @@
         </div>
       </div>
 
-      <!-- Mode Toggle: Customer vs Telkomsel View -->
-      <div class="flex items-center gap-2 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
-        <button onclick="setAppMode('customer')" id="btn-mode-customer" class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white transition">Customer View (4 Layar H.O.M.E.)</button>
-        <button onclick="setAppMode('telkomsel')" id="btn-mode-telkomsel" class="px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition">Telkomsel View (Khusus Juri / B2B)</button>
+      <!-- Customer Account Status Indicator -->
+      <div class="flex items-center gap-2 bg-slate-950 px-3.5 py-2 rounded-xl border border-slate-800">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span class="text-xs font-semibold text-slate-300">MyTelkomsel App • <strong class="text-white">4-Step Customer Journey</strong></span>
       </div>
     </div>
 
-    <!-- CUSTOMER VIEW -->
+    <!-- CUSTOMER VIEW (4 LAYAR H.O.M.E.) -->
     <div id="mode-customer" class="space-y-5">
       <!-- Step Navigation Bar -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-slate-950/70 p-2 rounded-xl border border-slate-800">
@@ -389,79 +389,10 @@
         </div>
       </div>
     </div>
-
-    <!-- TELKOMSEL VIEW (KHUSUS JURI / B2B) -->
-    <div id="mode-telkomsel" class="hidden space-y-5">
-      <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-5 space-y-4">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <div>
-            <h2 class="text-base font-bold text-sky-400">Telkomsel Executive View — Peta Geospasial Segmen & Funnel H.O.M.E.</h2>
-            <p class="text-xs text-slate-400">Menunjukkan bagaimana data lokasi ODP dan usage dipakai Telkomsel untuk mengeksekusi migrasi & menjaga KPI.</p>
-          </div>
-          <span class="text-xs px-2.5 py-1 rounded bg-slate-900 text-slate-400 border border-slate-700">*Simulasi Data Geospasial & Funnel</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
-          <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
-            <div class="text-xs text-slate-400">Target ARPU (Tahun 3)</div>
-            <div class="text-lg font-bold text-emerald-400 mt-0.5">Rp213,5K → Rp238,5K</div>
-            <div class="text-xs text-slate-400">+Rp25K/pelanggan (≈ +Rp3,1 T/thn)</div>
-          </div>
-          <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
-            <div class="text-xs text-slate-400">Target Move Up (Orbit → IndiHome)</div>
-            <div class="text-lg font-bold text-sky-400 mt-0.5">450.000 Rumah</div>
-            <div class="text-xs text-slate-400">~38% dari ~1,18 Jt Base Orbit</div>
-          </div>
-          <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
-            <div class="text-xs text-slate-400">Penetrasi FMC (Embed)</div>
-            <div class="text-lg font-bold text-amber-400 mt-0.5">59% → 73%</div>
-            <div class="text-xs text-slate-400">+1,9 Juta Rumah Tangga FMC</div>
-          </div>
-          <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
-            <div class="text-xs text-slate-400">Penurunan Monthly Churn</div>
-            <div class="text-lg font-bold text-rose-400 mt-0.5">-45 bps (Bulanan)</div>
-            <div class="text-xs text-slate-400">Dari ~1,20% ke ~0,75% / bulan</div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2.5">
-            <div class="text-xs font-bold text-white uppercase tracking-wider">Distribusi Segmen & Area "Migration-Ready"</div>
-            <div class="space-y-2 text-xs">
-              <div class="flex justify-between"><span>• Flexible Starters (Orbit Murni - Zona Biru/Kos)</span><span class="font-bold text-sky-400">~730K Rumah Tangga</span></div>
-              <div class="flex justify-between"><span>• Flexible Growing (Orbit di Area Baru Fiber - Target Move Up)</span><span class="font-bold text-amber-400">~450K Rumah Tangga (Migration-Ready)</span></div>
-              <div class="flex justify-between"><span>• Stable Mainstream (IndiHome - Target Optimize & Embed)</span><span class="font-bold text-emerald-400">~8,6 Juta Rumah Tangga</span></div>
-              <div class="flex justify-between"><span>• Performance Households (IndiHome High-Tier + Orbit Backup)</span><span class="font-bold text-rose-400">~1,7 Juta Rumah Tangga</span></div>
-            </div>
-          </div>
-
-          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2.5">
-            <div class="text-xs font-bold text-white uppercase tracking-wider">Funnel Terukur "Move Up" (Orbit → IndiHome FMC)</div>
-            <div class="space-y-1.5 text-xs">
-              <div>1. <strong>Eligible (Fiber-Ready + Usage Tinggi + Menetap):</strong> 620.000 Rumah Tangga Orbit</div>
-              <div>2. <strong>Dijangkau (In-App Navigator + WhatsApp Concierge):</strong> 560.000 Rumah Tangga (90%)</div>
-              <div>3. <strong>Menerima Tawaran Bundel FMC:</strong> 475.000 Rumah Tangga (85%)</div>
-              <div class="text-emerald-400 font-bold">4. Terpasang IndiHome Tanpa Jeda: 450.000 Rumah Tangga (95% Fulfillment)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <script>
     let isFiberReady = true;
-
-    function setAppMode(mode) {
-      document.getElementById('mode-customer').classList.toggle('hidden', mode !== 'customer');
-      document.getElementById('mode-telkomsel').classList.toggle('hidden', mode !== 'telkomsel');
-      document.getElementById('btn-mode-customer').className = mode === 'customer'
-        ? 'px-3.5 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white transition'
-        : 'px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition';
-      document.getElementById('btn-mode-telkomsel').className = mode === 'telkomsel'
-        ? 'px-3.5 py-1.5 rounded-lg text-xs font-bold bg-sky-600 text-white transition'
-        : 'px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition';
-    }
 
     function goStep(step) {
       ['H', 'O', 'M', 'E'].forEach(s => {
