@@ -57,10 +57,6 @@ export const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const stepIndex = STEPS.findIndex((s) => s.key === activeStep);
-  const progressBarPercent =
-    stepIndex === 0 ? '12%' : stepIndex === 1 ? '38%' : stepIndex === 2 ? '68%' : '100%';
-
   const activeMilestoneBadge =
     embed.familyLines === 1
       ? 'Bronze Starter'
@@ -97,9 +93,9 @@ export const App: React.FC = () => {
 
       {/* Mobile Super-App Container Frame */}
       <div className="w-full max-w-[440px] min-h-screen md:min-h-[840px] bg-surface text-on-surface flex flex-col relative md:rounded-[32px] md:shadow-[0_24px_60px_rgba(0,0,0,0.6)] md:border-[6px] md:border-slate-800 overflow-hidden">
-        {/* Top Fixed Red Telkomsel Header + 4-Step H.O.M.E. Stepper */}
+        {/* Top Fixed Red Telkomsel Header */}
         <header className="sticky top-0 w-full z-40 bg-gradient-to-r from-[#FF4D4D] via-[#E60012] to-primary-container shadow-[0_10px_24px_-4px_rgba(184,0,14,0.22)]">
-          <div className="flex flex-col justify-between pt-2 pb-2.5">
+          <div className="flex flex-col justify-between py-1">
             {/* Top Brand & User Profile Row */}
             <div className="flex items-center justify-between px-4 h-14">
               <div
@@ -174,65 +170,6 @@ export const App: React.FC = () => {
                     </span>
                   </div>
                 </button>
-              </div>
-            </div>
-
-            {/* Interactive 4-Step H.O.M.E. Ladder Stepper Bar */}
-            <div className="bg-white/95 backdrop-blur-xl px-3 py-2.5 mx-3 mt-1 rounded-xl shadow-[0_4px_20px_-2px_rgba(184,0,14,0.12)]">
-              <div className="relative flex items-center justify-between">
-                {/* Background Track */}
-                <div className="absolute left-6 right-6 top-3 h-[2.5px] bg-surface-container-high z-0"></div>
-                {/* Active Progress Track */}
-                <div
-                  className="absolute left-6 top-3 h-[2.5px] bg-primary-container z-0 transition-all duration-300"
-                  style={{ width: `calc(${progressBarPercent} - 2rem)` }}
-                ></div>
-
-                {STEPS.map((s, idx) => {
-                  const isCurrent = activeStep === s.key;
-                  const isPassed = idx < stepIndex;
-
-                  return (
-                    <button
-                      key={s.key}
-                      type="button"
-                      onClick={() => handleGoStep(s.key)}
-                      className="relative z-10 flex flex-col items-center gap-1 group focus:outline-none"
-                    >
-                      <div className="relative flex items-center justify-center">
-                        <div
-                          className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold transition-all ${
-                            isCurrent
-                              ? 'bg-primary-container text-white shadow-md scale-110'
-                              : isPassed
-                              ? 'bg-secondary text-white shadow-sm'
-                              : 'bg-surface-container text-outline hover:bg-surface-container-high'
-                          }`}
-                        >
-                          {isPassed ? (
-                            <span className="material-symbols-outlined text-[14px]">check</span>
-                          ) : (
-                            s.short
-                          )}
-                        </div>
-                        {isCurrent && (
-                          <span className="absolute -inset-1 rounded-full bg-primary-container/25 animate-ping"></span>
-                        )}
-                      </div>
-                      <span
-                        className={`text-[10px] tracking-tight transition-colors ${
-                          isCurrent
-                            ? 'text-primary-container font-extrabold'
-                            : isPassed
-                            ? 'text-secondary font-bold'
-                            : 'text-outline font-semibold'
-                        }`}
-                      >
-                        {s.label}
-                      </span>
-                    </button>
-                  );
-                })}
               </div>
             </div>
           </div>
