@@ -255,7 +255,7 @@ export const App: React.FC = () => {
             }`}
           >
             <span className="material-symbols-outlined text-[21px]">workspace_premium</span>
-            <span className="text-[10px] mt-0.5">Milestone</span>
+            <span className="text-[10px] mt-0.5">Embed</span>
           </button>
         </nav>
       </div>

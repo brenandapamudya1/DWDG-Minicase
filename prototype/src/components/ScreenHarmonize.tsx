@@ -200,14 +200,119 @@ export const ScreenHarmonize: React.FC<Props> = ({ profile, setProfile, onNextSt
 
   const rec = computeRecommendation();
 
+  const currentConnBadge =
+    profile.q4CurrentConn === 'indihome'
+      ? { label: 'IndiHome Fiber Aktif', icon: 'router', color: 'text-emerald-700 bg-emerald-50 border-emerald-200/80' }
+      : profile.q4CurrentConn === 'orbit'
+      ? { label: 'Telkomsel Orbit Aktif', icon: 'cell_tower', color: 'text-sky-700 bg-sky-50 border-sky-200/80' }
+      : { label: 'Wi-Fi Kompetitor / Baru', icon: 'wifi_find', color: 'text-amber-800 bg-amber-50 border-amber-200/80' };
+
   return (
     <div className="px-4 pt-4 pb-6 flex flex-col gap-4">
+      {/* Hybrid Welcome & Household Ecosystem Status Card */}
+      <div className="relative rounded-2xl overflow-hidden shadow-md border border-rose-200/60 bg-gradient-to-br from-[#FFF5F5] via-surface-container-lowest to-[#F0F7FF]">
+        {/* Top Accent Gradient Strip matching Header */}
+        <div className="h-1.5 w-full bg-gradient-to-r from-[#FF4D4D] via-[#E60012] to-amber-400" />
+
+        {/* Subtle Decorative Radial Glow */}
+        <div className="pointer-events-none absolute -top-10 -right-10 w-28 h-28 rounded-full bg-gradient-to-br from-rose-500/10 to-amber-400/15 blur-xl" />
+
+        <div className="p-3.5 flex flex-col gap-3 relative z-10">
+          {/* Greeting & Quick Context Row */}
+          <div className="flex items-start justify-between gap-2">
+            <div className="flex flex-col">
+              <div className="flex items-center gap-1.5">
+                <span className="text-[18px] font-bold text-primary-container uppercase tracking-wider">
+                  Selamat Siang, Keluarga Budi 👋
+                </span>
+              </div>
+              <h1 className="font-outfit text-base font-extrabold text-on-surface leading-snug mt-0.5">
+                Pusat Kendali Internet Rumah Anda
+              </h1>
+              <p className="text-[11px] text-on-surface-variant leading-snug mt-0.5">
+                Cek kesiapan jaringan &amp; sesuaikan paket rumah terbaik tanpa tumpang-tindih layanan.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => onNextStep('E')}
+              className="shrink-0 flex flex-col items-end bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100/90 border border-amber-300/80 rounded-xl px-2.5 py-1.5 shadow-sm hover:brightness-95 transition-all"
+            >
+              <span className="text-[9px] font-extrabold text-amber-800 uppercase tracking-wider flex items-center gap-0.5">
+                <span className="material-symbols-outlined text-[12px] text-amber-600">workspace_premium</span>
+                Benefit Rumah
+              </span>
+              <span className="font-outfit text-xs font-extrabold text-amber-950">
+                Rp 145rb<span className="text-[10px] font-semibold text-amber-800">/bln</span>
+              </span>
+            </button>
+          </div>
+
+          {/* Mini Household Dashboard Metrics Strip */}
+          <div className="grid grid-cols-3 gap-2 pt-2 border-t border-slate-200/70">
+            {/* Metric 1: Active Connection Status */}
+            <div className="flex items-center gap-1.5 bg-white/80 rounded-xl px-2.5 py-1.5 border border-slate-200/60 shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+              <div
+                className={`w-6 h-6 rounded-lg flex items-center justify-center shrink-0 border ${currentConnBadge.color}`}
+              >
+                <span className="material-symbols-outlined text-[14px]">{currentConnBadge.icon}</span>
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-[9px] text-on-surface-variant font-semibold leading-none">
+                  Status Koneksi
+                </span>
+                <span className="text-[10px] font-extrabold text-on-surface truncate mt-0.5">
+                  {currentConnBadge.label}
+                </span>
+              </div>
+            </div>
+
+            {/* Metric 2: Shared Family Quota / Pulsa Integration */}
+            <div
+              onClick={() => onNextStep('E')}
+              className="cursor-pointer flex items-center gap-1.5 bg-white/80 hover:bg-white rounded-xl px-2.5 py-1.5 border border-slate-200/60 shadow-[0_1px_2px_rgba(0,0,0,0.02)] transition-colors"
+            >
+              <div className="w-6 h-6 rounded-lg bg-rose-50 text-primary-container border border-rose-200/80 flex items-center justify-center shrink-0">
+                <span className="material-symbols-outlined text-[14px]">family_star</span>
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-[9px] text-on-surface-variant font-semibold leading-none">
+                  Kuota Keluarga
+                </span>
+                <span className="text-[10px] font-extrabold text-primary-container truncate mt-0.5">
+                  30 GB (3 No HP)
+                </span>
+              </div>
+            </div>
+
+            {/* Metric 3: Telkomsel Poin / Tagihan Rumah */}
+            <div
+              onClick={() => onNextStep('O')}
+              className="cursor-pointer flex items-center gap-1.5 bg-white/80 hover:bg-white rounded-xl px-2.5 py-1.5 border border-slate-200/60 shadow-[0_1px_2px_rgba(0,0,0,0.02)] transition-colors"
+            >
+              <div className="w-6 h-6 rounded-lg bg-amber-50 text-amber-700 border border-amber-200/80 flex items-center justify-center shrink-0">
+                <span className="material-symbols-outlined text-[14px]">toll</span>
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-[9px] text-on-surface-variant font-semibold leading-none">
+                  Telkomsel Poin
+                </span>
+                <span className="text-[10px] font-extrabold text-on-surface truncate mt-0.5">
+                  1.420 Poin VIP
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Coverage Check / Geospatial Card */}
       <div className="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-3 border border-slate-100">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5">
             <span className="material-symbols-outlined text-primary-container text-[20px]">share_location</span>
-            <span className="text-sm font-bold text-on-surface">1. Validasi Geospasial Jaringan Rumah</span>
+            <span className="text-sm font-bold text-on-surface">Geospasial Checking</span>
           </div>
           <span className="text-[11px] bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full flex items-center gap-1 font-bold">
             <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> GIS Live
@@ -369,10 +474,10 @@ export const ScreenHarmonize: React.FC<Props> = ({ profile, setProfile, onNextSt
         <div className="flex items-center justify-between px-1">
           <div>
             <h2 className="font-outfit text-sm font-bold text-on-surface">
-              2. Pilih Preset 4 Segmen Rumah Tangga (H.O.M.E.)
+              Pilih Preset 4 Segmen Rumah Tangga (H.O.M.E.)
             </h2>
             <p className="text-[11px] text-on-surface-variant">
-              Klik salah satu segmen untuk simulasi cepat atau ubah kuis di bawah
+              Klik untuk mengisi profil rumah tangga secara instan. Anda dapat menyesuaikan jawaban kuis di bawahnya.
             </p>
           </div>
           <span className="material-symbols-outlined text-primary-container text-[20px]">auto_awesome</span>
