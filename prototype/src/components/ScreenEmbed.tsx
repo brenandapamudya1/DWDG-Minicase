@@ -92,9 +92,6 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
             <span className="material-symbols-outlined text-amber-500 text-[26px]">military_tech</span>
             <div>
               <div className="text-sm font-extrabold text-on-surface">H.O.M.E. Milestone Loyalty</div>
-              <div className="text-[11px] text-on-surface-variant">
-                Progres kasta loyalitas rumah tangga (Pendekatan Shopee Member)
-              </div>
             </div>
           </div>
           <div className="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-extrabold">
@@ -129,7 +126,7 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
               </div>
               <span className="text-xs font-extrabold text-on-surface">🥉 Bronze</span>
               <span className="text-[10px] text-on-surface-variant leading-tight">
-                Tahap H (1 No • ~Rp15rb)
+                (No 1. ~Rp15rb)
               </span>
             </div>
 
@@ -153,7 +150,7 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
               </div>
               <span className="text-xs font-extrabold text-on-surface">🥈 Silver</span>
               <span className="text-[10px] text-on-surface-variant leading-tight">
-                Tahap O/M (2 No • ~Rp65rb)
+                (No 2. ~Rp65rb)
               </span>
             </div>
 
@@ -181,7 +178,7 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
                 🥇 Gold VIP
               </span>
               <span className="text-[10px] font-bold text-on-surface leading-tight">
-                Tahap E (&ge;3 No • Rp145rb+)
+                (No 3. ~Rp145rb+)
               </span>
             </div>
           </div>
@@ -203,7 +200,7 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
                 ? 'Misi Berikutnya: Silver'
                 : lines === 2
                 ? '1 Nomor Lagi ke Gold VIP!'
-                : 'Level Tertinggi: Gold Family VIP'}
+                : 'Reward: Gold Family VIP'}
             </span>
           </div>
 
@@ -240,7 +237,7 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
           <div className="flex items-center gap-1.5">
             <span className="material-symbols-outlined text-primary-container text-[21px]">diversity_1</span>
             <h2 className="font-outfit text-sm font-bold text-on-surface">
-              Hub Nomor Seluler Keluarga (Horizontal FMC)
+              Hub Nomor Seluler Keluarga
             </h2>
           </div>
           <p className="text-xs text-on-surface-variant">
@@ -449,76 +446,6 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
         </div>
       </div>
 
-      {/* High-Impact Loss Aversion Calculator Card (Unified with Proposed_Solution.md!) */}
-      <div className="rounded-2xl p-4 bg-error-container text-on-error-container shadow-xl flex flex-col gap-3 relative overflow-hidden border border-error/25">
-        <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-error text-[24px]">warning</span>
-          <div className="flex flex-col">
-            <span className="text-[10px] text-error font-extrabold tracking-wider uppercase">
-              Kalkulator "Biaya Berpindah" (Loss Aversion ala Shopee)
-            </span>
-            <h3 className="font-outfit text-sm font-extrabold text-on-surface leading-tight">
-              Simulasi Kerugian Jika Pindah ke Wi-Fi Kompetitor
-            </h3>
-          </div>
-        </div>
-
-        {/* Big Loss Callout Box */}
-        <div className="bg-white rounded-xl p-3.5 text-center shadow-sm border border-error/15">
-          <span className="text-[10px] font-extrabold text-on-surface-variant uppercase tracking-wider block">
-            {netSwitchingLossMonthly > 0
-              ? 'Total Kerugian Bersih Keluarga Jika Cabut Langganan:'
-              : 'Selisih Nilai Saat Ini (Naik ke Silver/Gold untuk Proteksi Penuh):'}
-          </span>
-          <div className="font-outfit text-2xl font-extrabold text-error mt-0.5 tabular-nums">
-            {netSwitchingLossMonthly > 0
-              ? `Rugi -${formatIDR(netSwitchingLossMonthly)} / bulan`
-              : `Benefit Aktif: ${formatIDR(totalBenefitMonthly)} / bulan`}
-          </div>
-          <p className="text-[11px] text-on-surface-variant mt-1 leading-snug">
-            Walaupun ISP kompetitor menawarkan diskon tarif <strong>Rp 25.000/bulan</strong>, keluarga Anda kehilangan benefit ekosistem senilai <strong>{formatIDR(totalBenefitMonthly)}/bulan</strong> (<strong>{formatIDR(yearlyBenefitProtected)}/tahun</strong> hangus seketika!).
-          </p>
-        </div>
-
-        {/* Breakdown of What Gets Forfeited */}
-        <div className="space-y-1.5 text-xs">
-          <span className="text-[10px] font-extrabold text-on-error-container uppercase tracking-wider block">
-            Fasilitas Keluarga yang Langsung Gugur Jika Pindah ISP:
-          </span>
-
-          <div className="bg-white/90 p-2.5 rounded-xl flex items-start gap-2 text-on-surface">
-            <span className="material-symbols-outlined text-error text-[16px] shrink-0 mt-0.5">cancel</span>
-            <span className="text-[11px] leading-snug">
-              <strong>Kuota Keluarga {sharedQuotaGB} GB ({lines} Nomor HP) Hangus:</strong> Harus beli paket data ketengan seharga <strong>{formatIDR(quotaVal)}/bln</strong>.
-            </span>
-          </div>
-
-          <div className="bg-white/90 p-2.5 rounded-xl flex items-start gap-2 text-on-surface">
-            <span className="material-symbols-outlined text-error text-[16px] shrink-0 mt-0.5">cancel</span>
-            <span className="text-[11px] leading-snug">
-              <strong>Akses Multi-OTT Keluarga Terputus:</strong> Kehilangan tayangan hiburan keluarga senilai <strong>{formatIDR(ottVal)}/bln</strong>.
-            </span>
-          </div>
-
-          <div className="bg-white/90 p-2.5 rounded-xl flex items-start gap-2 text-on-surface">
-            <span className="material-symbols-outlined text-error text-[16px] shrink-0 mt-0.5">cancel</span>
-            <span className="text-[11px] leading-snug">
-              <strong>Status {tierName} &amp; Tenure Gugur ke Nol:</strong> Kehilangan Speed Boost +10 Mbps &amp; garansi teknisi VIP &lt;6 jam senilai <strong>{formatIDR(vipVal)}/bln</strong>.
-            </span>
-          </div>
-        </div>
-
-        {/* Positive Retention Summary */}
-        <div className="bg-white rounded-xl p-3 flex items-center gap-2.5 border border-secondary/30">
-          <div className="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
-            <span className="material-symbols-outlined text-[18px]">savings</span>
-          </div>
-          <p className="text-[11px] text-on-surface leading-snug">
-            <strong className="text-secondary">Keputusan Cerdas:</strong> Bertahan di ekosistem <strong>MyTelkomsel H.O.M.E.</strong> mengamankan nilai manfaat <strong>{formatIDR(yearlyBenefitProtected)} per tahun</strong> bagi keluarga Anda!
-          </p>
-        </div>
-      </div>
-
       {/* Bottom Action CTA */}
       <div className="space-y-2 pt-1">
         <button
@@ -527,7 +454,7 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
           className="w-full h-12 px-4 rounded-xl bg-gradient-to-r from-[#FF4D4D] via-[#E60012] to-primary-container text-white font-bold text-sm shadow-md hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
         >
           <span className="material-symbols-outlined text-[18px]">verified</span>
-          <span>Kunci Perlindungan Gold VIP (Kembali ke [H] Awal)</span>
+          <span>Kunci Paket</span>
         </button>
       </div>
     </div>

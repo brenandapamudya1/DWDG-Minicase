@@ -8,200 +8,8 @@ interface Props {
 }
 
 export const ScreenMoveUp: React.FC<Props> = ({ move, setMove, onNextStep }) => {
-  const activeSignalsCount =
-    (move.sig1FiberReady ? 1 : 0) +
-    (move.sig2HighUsage ? 1 : 0) +
-    (move.sig3TenureMet ? 1 : 0);
-
-  const score = activeSignalsCount === 3 ? 100 : activeSignalsCount === 2 ? 67 : activeSignalsCount === 1 ? 34 : 0;
-  const isReady = activeSignalsCount === 3;
-  const dashOffset = 188.5 - (188.5 * score) / 100;
-
   return (
     <div className="px-4 pt-4 pb-6 flex flex-col gap-4">
-      {/* 3-Signal Migration Readiness Radar Widget */}
-      <div className="bg-surface-container-lowest rounded-xl shadow-md p-4 flex flex-col gap-3.5 border border-slate-100">
-        <div className="flex items-center justify-between bg-surface-container-low rounded-xl p-3.5">
-          <div className="flex flex-col gap-0.5 pr-2">
-            <div className="flex items-center gap-1.5">
-              <span
-                className={`material-symbols-outlined text-[19px] ${
-                  isReady ? 'text-secondary' : 'text-amber-600'
-                }`}
-              >
-                radar
-              </span>
-              <span
-                className={`text-[11px] font-bold uppercase tracking-wider ${
-                  isReady ? 'text-secondary' : 'text-amber-700'
-                }`}
-              >
-                Radar Kesiapan Migrasi (Klik Sinyal untuk Uji)
-              </span>
-            </div>
-            <span className="font-outfit text-base font-extrabold text-on-surface">
-              {isReady
-                ? '100% Siap Naik Kelas ke IndiHome!'
-                : `Tetap di Orbit Dulu (${activeSignalsCount}/3 Sinyal)`}
-            </span>
-            <span className="text-[11px] text-on-surface-variant">
-              {isReady
-                ? 'Seluruh 3 sinyal infrastruktur, usage & hunian terpenuhi.'
-                : 'Guardrail H.O.M.E.: Pelanggan belum siap tidak dipaksa pindah ke Fiber.'}
-            </span>
-          </div>
-
-          {/* Radial Circular Progress Meter */}
-          <div className="relative flex-shrink-0 w-18 h-18 flex items-center justify-center">
-            <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 72 72">
-              <circle
-                className="text-surface-variant fill-none"
-                cx="36"
-                cy="36"
-                r="30"
-                stroke="currentColor"
-                strokeWidth="6"
-              ></circle>
-              <circle
-                className={`${isReady ? 'text-secondary' : 'text-amber-500'} fill-none transition-all duration-300`}
-                cx="36"
-                cy="36"
-                r="30"
-                stroke="currentColor"
-                strokeDasharray="188.5"
-                strokeDashoffset={dashOffset}
-                strokeLinecap="round"
-                strokeWidth="6"
-              ></circle>
-            </svg>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="font-outfit text-sm font-extrabold text-on-surface">{score}%</span>
-              <span className="text-[9px] font-bold text-on-surface-variant -mt-0.5">SKOR</span>
-            </div>
-          </div>
-        </div>
-
-        {/* 3 Clickable Diagnostic Signals */}
-        <div className="space-y-2.5">
-          {/* Signal 1: Fiber-Ready ODP */}
-          <div
-            onClick={() => setMove((m) => ({ ...m, sig1FiberReady: !m.sig1FiberReady }))}
-            className={`cursor-pointer p-3 rounded-xl flex items-start gap-3 transition-all border ${
-              move.sig1FiberReady
-                ? 'bg-surface-container-low border-secondary/40'
-                : 'bg-slate-50 border-slate-200 opacity-70'
-            }`}
-          >
-            <div
-              className={`mt-0.5 w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                move.sig1FiberReady
-                  ? 'bg-secondary-container text-on-secondary-container'
-                  : 'bg-slate-200 text-slate-500'
-              }`}
-            >
-              <span className="material-symbols-outlined text-[18px]">settings_input_hdmi</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-bold text-on-surface">
-                  1. Sinyal Geospasial: ODP Fiber-Ready
-                </span>
-                <span
-                  className={`px-2 py-0.5 rounded-full text-[10px] font-bold shrink-0 ${
-                    move.sig1FiberReady
-                      ? 'bg-secondary/15 text-secondary'
-                      : 'bg-slate-200 text-slate-600'
-                  }`}
-                >
-                  {move.sig1FiberReady ? 'TERPENUHI (ODP 12m)' : 'BELUM FIBER'}
-                </span>
-              </div>
-              <p className="text-[11px] text-on-surface-variant mt-0.5 leading-snug">
-                Jaringan optik IndiHome (<strong>ODP-KBY-042</strong>) kini aktif 12 meter dari depan pagar rumah Anda (4 port kosong tersedia).
-              </p>
-            </div>
-          </div>
-
-          {/* Signal 2: High Orbit Cellular Usage */}
-          <div
-            onClick={() => setMove((m) => ({ ...m, sig2HighUsage: !m.sig2HighUsage }))}
-            className={`cursor-pointer p-3 rounded-xl flex items-start gap-3 transition-all border ${
-              move.sig2HighUsage
-                ? 'bg-surface-container-low border-primary-container/30'
-                : 'bg-slate-50 border-slate-200 opacity-70'
-            }`}
-          >
-            <div
-              className={`mt-0.5 w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                move.sig2HighUsage
-                  ? 'bg-primary-fixed text-on-primary-fixed-variant'
-                  : 'bg-slate-200 text-slate-500'
-              }`}
-            >
-              <span className="material-symbols-outlined text-[18px]">trending_up</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-bold text-on-surface">
-                  2. Sinyal Usage Telemetry: Trafik Tinggi
-                </span>
-                <span
-                  className={`px-2 py-0.5 rounded-full text-[10px] font-bold shrink-0 ${
-                    move.sig2HighUsage
-                      ? 'bg-primary-fixed text-on-primary-fixed-variant'
-                      : 'bg-slate-200 text-slate-600'
-                  }`}
-                >
-                  {move.sig2HighUsage ? 'TERPENUHI (>150 GB/bln)' : 'PEMAKAIAN RENDAH'}
-                </span>
-              </div>
-              <p className="text-[11px] text-on-surface-variant mt-0.5 leading-snug">
-                Pemakaian Orbit keluarga mencapai <strong>210 GB bulan lalu</strong> (2x isi ulang kuota). Naik ke IndiHome Fiber memberikan kuota <strong>Unlimited</strong> dengan biaya per GB jauh lebih hemat.
-              </p>
-            </div>
-          </div>
-
-          {/* Signal 3: Loyalty Tenure & Settled Dwelling */}
-          <div
-            onClick={() => setMove((m) => ({ ...m, sig3TenureMet: !m.sig3TenureMet }))}
-            className={`cursor-pointer p-3 rounded-xl flex items-start gap-3 transition-all border ${
-              move.sig3TenureMet
-                ? 'bg-surface-container-low border-sky-400/40'
-                : 'bg-slate-50 border-slate-200 opacity-70'
-            }`}
-          >
-            <div
-              className={`mt-0.5 w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                move.sig3TenureMet
-                  ? 'bg-tertiary-fixed text-tertiary'
-                  : 'bg-slate-200 text-slate-500'
-              }`}
-            >
-              <span className="material-symbols-outlined text-[18px]">verified</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-bold text-on-surface">
-                  3. Sinyal Hunian &amp; Tenure: Menetap &ge;6 Bln
-                </span>
-                <span
-                  className={`px-2 py-0.5 rounded-full text-[10px] font-bold shrink-0 ${
-                    move.sig3TenureMet
-                      ? 'bg-tertiary-fixed text-tertiary'
-                      : 'bg-slate-200 text-slate-600'
-                  }`}
-                >
-                  {move.sig3TenureMet ? 'TERPENUHI (9 Bulan)' : 'MASIH SEWA SINGKAT'}
-                </span>
-              </div>
-              <p className="text-[11px] text-on-surface-variant mt-0.5 leading-snug">
-                Masa aktif 9 bulan di Orbit <strong>tidak hangus (Tenure Carryover)</strong>—langsung membuka status <strong>🥈 Silver Upgrader</strong> &amp; <strong>Gratis Biaya Pasang Rp 500.000</strong>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Zero-Downtime Orbit-to-IndiHome Upgrade Hero Card (Fixed Icon Glitch!) */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#FF4D4D] via-[#E60012] to-primary-container text-white p-4 shadow-xl">
         <div className="absolute -right-8 -bottom-10 opacity-10 pointer-events-none">
@@ -356,14 +164,14 @@ export const ScreenMoveUp: React.FC<Props> = ({ move, setMove, onNextStep }) => 
           onClick={() => onNextStep('E')}
           className="w-full h-12 px-4 rounded-xl bg-gradient-to-r from-[#FF4D4D] via-[#E60012] to-primary-container text-white font-bold text-sm shadow-md hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
         >
-          <span>Konfirmasi Move Up &amp; Buka [E] Embed Milestone</span>
+          <span>Konfirmasi & Buka Milestone</span>
           <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
         </button>
 
         <div className="flex items-center justify-center gap-1.5 text-on-surface-variant pt-1">
-          <span className="material-symbols-outlined text-[15px]">lock</span>
+          {/* <span className="material-symbols-outlined text-[15px]">lock</span> */}
           <span className="text-[11px]">
-            Rp 0 biaya instalasi • Tanpa penalti pembatalan Orbit • Masa aktif terbawa
+            {/* Rp 0 biaya instalasi • Tanpa penalti pembatalan Orbit • Masa aktif terbawa */}
           </span>
         </div>
       </div>

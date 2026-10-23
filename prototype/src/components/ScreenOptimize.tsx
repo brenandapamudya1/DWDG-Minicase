@@ -450,7 +450,7 @@ export const ScreenOptimize: React.FC<Props> = ({ opt, setOpt, onNextStep }) => 
           onClick={() => onNextStep('M')}
           className="w-full h-12 rounded-xl bg-gradient-to-r from-[#FF4D4D] via-[#E60012] to-primary-container text-white font-bold text-sm shadow-md hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
         >
-          <span>Kunci Paket &amp; Cek Radar [M] Move Up</span>
+          <span>Kunci Paket & Cek Jadwal Pemasangan</span>
           <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
         </button>
       </div>

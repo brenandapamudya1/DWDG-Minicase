@@ -188,8 +188,8 @@ export const ScreenHarmonize: React.FC<Props> = ({ profile, setProfile, onNextSt
         isFiber
           ? '100% Fiber Optic stabil tanpa kuota batas (Unlimited) untuk seluruh anggota rumah'
           : 'Koneksi rumah langsung aktif hari ini sambil menunggu instalasi ODP IndiHome di jalan Anda',
-        'Siap dinaikkan ke tangga [O] Optimize (+Entertainment Bundle Rp230.000/bln)',
-        'Buka Kuota Keluarga Bersama 30–50 GB/bln di tahap [E] Embed (🥇 Gold VIP)',
+        'Siap upgrade (+Entertainment Bundle Rp230.000/bln)',
+        'Buka Kuota Keluarga Bersama 30–50 GB/bln untuk (🥇 Gold VIP)',
         'Garansi layanan teknisi prioritas via aplikasi MyTelkomsel',
       ],
       geoNote: isFiber
@@ -735,7 +735,7 @@ export const ScreenHarmonize: React.FC<Props> = ({ profile, setProfile, onNextSt
           onClick={() => onNextStep('O')}
           className="mt-2 w-full h-12 rounded-xl bg-gradient-to-r from-[#FF4D4D] via-[#E60012] to-primary-container text-white font-bold text-sm shadow-md hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
         >
-          <span>Lanjut ke [O] Optimize Tangga Nilai</span>
+          <span>Lanjut ke Pemilihan Produk</span>
           <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
         </button>
       </div>
