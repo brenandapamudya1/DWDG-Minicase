@@ -19,27 +19,6 @@ export const ScreenMoveUp: React.FC<Props> = ({ move, setMove, onNextStep }) => 
 
   return (
     <div className="px-4 pt-4 pb-6 flex flex-col gap-4">
-      {/* Header Sub-bar Context */}
-      <div className="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-1 border border-slate-100">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary-container text-white text-[11px] font-bold uppercase tracking-wide">
-              Tahap 3 dari 4 • [M] Move Up
-            </span>
-          </div>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container text-[11px] font-bold">
-            <span className="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
-            Graduation Engine
-          </span>
-        </div>
-        <h1 className="font-outfit text-lg font-bold text-on-surface tracking-tight mt-0.5">
-          Move Up: Orbit Naik Kelas ke IndiHome Fiber
-        </h1>
-        <p className="text-xs text-on-surface-variant leading-relaxed">
-          Jalur migrasi otomatis dari <strong>Telkomsel Orbit</strong> ke <strong>IndiHome Fiber</strong> saat 3 sinyal kesiapan terpenuhi—dengan jaminan <strong>Zero-Downtime</strong>.
-        </p>
-      </div>
-
       {/* 3-Signal Migration Readiness Radar Widget */}
       <div className="bg-surface-container-lowest rounded-xl shadow-md p-4 flex flex-col gap-3.5 border border-slate-100">
         <div className="flex items-center justify-between bg-surface-container-low rounded-xl p-3.5">

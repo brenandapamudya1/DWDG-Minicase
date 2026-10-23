@@ -44,22 +44,6 @@ export const ScreenOptimize: React.FC<Props> = ({ opt, setOpt, onNextStep }) => 
 
   return (
     <div className="px-4 pt-4 pb-6 flex flex-col gap-4">
-      {/* Header Sub-bar Context */}
-      <div className="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-1 border border-slate-100">
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-[11px] font-bold uppercase tracking-wide">
-            Tahap 2 dari 4 • [O] Optimize
-          </span>
-          <span className="text-[11px] text-on-surface-variant font-semibold">• Vertical Value Ladder</span>
-        </div>
-        <h1 className="font-outfit text-lg font-bold text-on-surface tracking-tight mt-0.5">
-          Optimize Your Monthly Value Ladder
-        </h1>
-        <p className="text-xs text-on-surface-variant leading-relaxed">
-          Menaikkan nilai per koneksi secara <strong>vertikal</strong> (bukan menaikkan tarif dasar paksa), melainkan melalui tangga benefit yang relevan dengan kebiasaan rumah tangga.
-        </p>
-      </div>
-
       {/* Live Value & ARPU Uplift Sticky Summary Card */}
       <div className="bg-gradient-to-r from-surface-container-lowest via-surface-container-low to-surface-container-lowest p-4 rounded-xl shadow-md flex flex-col gap-2 border border-primary-container/20">
         <div className="flex items-center justify-between">

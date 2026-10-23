@@ -202,24 +202,6 @@ export const ScreenHarmonize: React.FC<Props> = ({ profile, setProfile, onNextSt
 
   return (
     <div className="px-4 pt-4 pb-6 flex flex-col gap-4">
-      {/* Sub-header context banner */}
-      <div className="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-1 relative overflow-hidden border border-slate-100">
-        <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-container/5 rounded-full blur-xl pointer-events-none"></div>
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1 bg-primary-fixed text-on-primary-fixed-variant px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wide uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
-            Tahap 1 dari 4 • [H] Harmonize
-          </span>
-          <span className="text-[11px] text-on-surface-variant font-semibold">Dual-Data Placement</span>
-        </div>
-        <h1 className="font-outfit text-lg font-bold text-on-surface tracking-tight mt-0.5">
-          Harmonize Your Household Connectivity
-        </h1>
-        <p className="text-xs text-on-surface-variant leading-relaxed">
-          Menempatkan rumah tangga di produk yang tepat sejak awal (<strong>Orbit vs IndiHome</strong>) menggunakan kombinasi <strong>Data Geospasial ODP</strong> &amp; <strong>Profil Penggunaan</strong>.
-        </p>
-      </div>
-
       {/* Coverage Check / Geospatial Card */}
       <div className="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-3 border border-slate-100">
         <div className="flex items-center justify-between">

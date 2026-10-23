@@ -85,25 +85,6 @@ export const ScreenEmbed: React.FC<Props> = ({ embed, setEmbed, onNextStep }) =>
 
   return (
     <div className="px-4 pt-4 pb-6 flex flex-col gap-4">
-      {/* Sub-bar Header with Stage Badge */}
-      <div className="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-1 border border-slate-100">
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-container text-white text-[11px] font-bold shadow-sm">
-            <span className="material-symbols-outlined text-[13px]">verified</span>
-            Tahap 4 dari 4 • [E] Embed
-          </span>
-          <span className="text-[11px] text-primary font-bold tracking-wider uppercase">
-            FMC &amp; Milestone Loyalty
-          </span>
-        </div>
-        <h1 className="font-outfit text-lg font-bold text-on-surface tracking-tight mt-0.5">
-          Embed: Ekosistem Keluarga &amp; Milestone (Bronze → Silver → Gold)
-        </h1>
-        <p className="text-xs text-on-surface-variant leading-relaxed">
-          Menautkan nomor seluler keluarga secara <strong>horizontal</strong> untuk membuka benefit bulanan ala Shopee Member dan menciptakan <em>switching cost</em> alami agar churn turun drastis.
-        </p>
-      </div>
-
       {/* Gamified Milestone Tier Bar (Strictly 3 Tiers: Bronze -> Silver -> Gold VIP) */}
       <div className="bg-surface-container-lowest rounded-2xl p-4 shadow-md flex flex-col gap-3.5 border border-slate-100">
         <div className="flex items-center justify-between">
