@@ -25,3 +25,67 @@
   width: 0px;
   background: transparent;
 }
+
+@keyframes splashLogoPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.75) translateY(16px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.04) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes splashBarRise {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.15);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes splashProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-splash-logo {
+  animation: splashLogoPop 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-bar-rise-1 {
+  transform-origin: bottom;
+  animation: splashBarRise 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.animate-bar-rise-2 {
+  transform-origin: bottom;
+  animation: splashBarRise 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both;
+}
+
+.animate-bar-rise-3 {
+  transform-origin: bottom;
+  animation: splashBarRise 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.41s both;
+}
+
+.animate-bar-rise-4 {
+  transform-origin: bottom;
+  animation: splashBarRise 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.54s both;
+}
+
+.animate-splash-progress {
+  animation: splashProgress 2.1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+

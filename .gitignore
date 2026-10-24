@@ -17,6 +17,8 @@ build/
 
 # Temporary / Reference Design Exports
 stitch_mytelkomsel_home_ladder_navigator/
+figure/
+references/powerpoint/
 
 # OS & Editor files
 .DS_Store

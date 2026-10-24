@@ -230,7 +230,7 @@ export const ScreenHarmonize: React.FC<Props> = ({ profile, setProfile, onNextSt
                 Pusat Kendali Internet Rumah Anda
               </h1>
               <p className="text-[11px] text-on-surface-variant leading-snug mt-0.5">
-                Cek kesiapan jaringan &amp; sesuaikan paket rumah terbaik tanpa tumpang-tindih layanan.
+                Cek kesiapan jaringan &amp; sesuaikan paket rumah anda.
               </p>
             </div>
 

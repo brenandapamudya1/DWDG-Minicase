@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- Minimalist Option A: Red Squircle & Pure White Negative-Space House Bars -->
+  <rect x="12" y="12" width="216" height="216" rx="52" fill="#E60012" />
+
+  <!-- White Minimalist Roofline with Chimney -->
+  <path
+    d="M48 122 L130 62 L152 78 L152 64 L172 64 L172 93 L192 108 L192 126 L130 81 L48 141 Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- 4 Pure White Ascending Columns Aligned Under the Roof (H - O - M - E) -->
+  <polygon points="62,141 86,123 86,184 62,184" fill="#FFFFFF" />
+  <polygon points="96,116 120,98 120,184 96,184" fill="#FFFFFF" />
+  <polygon points="130,91 154,109 154,184 130,184" fill="#FFFFFF" />
+  <polygon points="164,116 184,131 184,184 164,184" fill="#FFFFFF" />
+</svg>
